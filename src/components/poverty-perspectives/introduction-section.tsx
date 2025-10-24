@@ -32,7 +32,7 @@ export function IntroductionSection() {
             '--fluid-font-size': '8vw',
             '--max-font-size': '5rem',
           } as React.CSSProperties}>
-            Poverty: The Invisible Force
+            What is Poverty?
           </h1>
           <div className="relative isolate z-10 mt-6 sm:mt-8 mb-4 sm:mb-5">
             <p className="font-body text-base sm:text-lg tracking-wide opacity-90">
