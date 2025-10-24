@@ -37,11 +37,11 @@ const NeuralNetworkBackground = ({ inView }: { inView: boolean }) => (
 
 const stats = [
     { 
-        title: "Epigenetic Alteration", 
+        title: "DNA Findings", 
         description: "Over 2,500 DNA sites are altered by poverty exposure (McDade et al., 2021)." 
     },
     { 
-        title: "Neurological Impact", 
+        title: "Cognitive Impact", 
         description: "Low-income youth show smaller hippocampal volumes, impairing memory (Harvard, 2023)." 
     }
 ];
@@ -68,7 +68,7 @@ export function ScientificSection() {
                     </p>
                 </div>
                 
-                <div className="bg-[#F5F3E7E6] text-card-foreground p-6 md:p-8 rounded-2xl border border-emerald-200 shadow-[0_6px_18px_rgba(0,0,0,0.12)] backdrop-blur-sm max-w-3xl animate-item w-full" style={{ animationName: 'fade-up', animationDelay: '0.8s' }}>
+                <div className="bg-[#F5F3E7E6] text-card-foreground p-6 md:p-8 rounded-2xl border border-emerald-300/20 shadow-md backdrop-blur-md max-w-3xl animate-item w-full" style={{ animationName: 'fade-up', animationDelay: '0.8s' }}>
                     <div className="relative grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4">
                         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[60%] w-[1px] bg-emerald-200 hidden md:block" />
                         {stats.map((stat, index) => (

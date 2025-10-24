@@ -45,7 +45,7 @@ export function EnvironmentalSection() {
             </div>
         </div>
         
-        <div className="bg-[#F5F3E7E0] text-card-foreground p-6 md:p-7 rounded-[20px] border border-emerald-200 shadow-[0_8px_24px_rgba(0,0,0,0.12)] backdrop-blur-sm max-w-3xl animate-item w-full" style={{ animationName: 'fade-up', animationDelay: '0.8s' }}>
+        <div className="bg-[#F5F3E7E0] text-card-foreground p-6 md:p-7 rounded-[20px] border border-emerald-300/20 shadow-md backdrop-blur-md max-w-3xl animate-item w-full" style={{ animationName: 'fade-up', animationDelay: '0.8s' }}>
           <h3 className="font-headline text-lg mb-2 font-semibold text-emerald-900">Statistic</h3>
           <p className="text-[1rem] md:text-[1.0625rem] leading-relaxed">
             “School conditions account for nearly 20% of learning loss in low-income districts (CDC, 2022).”
