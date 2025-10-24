@@ -23,6 +23,42 @@
       "description": "Aerial view of a city grid blending into a green forest",
       "imageUrl": "https://images.unsplash.com/photo-1732213429453-1951a5f4a1fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjaXR5JTIwZm9yZXN0fGVufDB8fHx8MTc2MTI3MzM5NHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "city forest"
+    },
+    {
+      "id": "advisor-bg",
+      "description": "University library aisle with books.",
+      "imageUrl": "https://images.unsplash.com/photo-1694180847566-3eb0da5baffa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bGlicmFyeSUyMGFpc2xlfGVufDB8fHx8MTc2MTMzNTYwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "library aisle"
+    },
+    {
+      "id": "scientific-member-bg",
+      "description": "Abstract visualization of a neural network.",
+      "imageUrl": "https://images.unsplash.com/photo-1644088379091-d574269d422f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxuZXVyYWwlMjBuZXR3b3JrfGVufDB8fHx8MTc2MTMyMDYyMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "neural network"
+    },
+    {
+      "id": "artistic-member-bg",
+      "description": "A stage with theater lighting.",
+      "imageUrl": "https://images.unsplash.com/photo-1503095396549-807759245b35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx0aGVhdGVyJTIwc3RhZ2V8ZW58MHx8fHwxNzYxMzMzMTA1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "theater stage"
+    },
+    {
+      "id": "cultural-member-bg",
+      "description": "A street in a vibrant urban neighborhood.",
+      "imageUrl": "https://images.unsplash.com/photo-1583273992815-a389df61575a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx1cmJhbiUyMHN0cmVldHxlbnwwfHx8fDE3NjEyODQ3NTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "urban street"
+    },
+    {
+      "id": "futuristic-member-bg",
+      "description": "A close-up of a person coding on a laptop.",
+      "imageUrl": "https://images.unsplash.com/photo-1523800503107-5bc3ba2a6f81?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxsYXB0b3AlMjBjb2Rpbmd8ZW58MHx8fHwxNzYxMzA3MTU2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "laptop coding"
+    },
+    {
+      "id": "environmental-member-bg",
+      "description": "A modern school building integrated with nature.",
+      "imageUrl": "https://images.unsplash.com/photo-1704476441987-4580b1380c9d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxncmVlbiUyMGFyY2hpdGVjdHVyZXxlbnwwfHx8fDE3NjEzMzU2MDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "green architecture"
     }
   ]
 }

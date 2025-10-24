@@ -6,7 +6,6 @@ import { EnvironmentalSection } from '@/components/poverty-perspectives/environm
 import { ScientificSection } from '@/components/poverty-perspectives/scientific-section';
 import { SolutionsSection } from '@/components/poverty-perspectives/solutions-section';
 import { TeamSection } from '@/components/poverty-perspectives/team-section';
-import { ReferencesSection } from '@/components/poverty-perspectives/references-section';
 
 export default function Home() {
   return (
@@ -19,7 +18,6 @@ export default function Home() {
       <ScientificSection />
       <SolutionsSection />
       <TeamSection />
-      <ReferencesSection />
     </main>
   );
 }
