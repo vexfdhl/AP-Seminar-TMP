@@ -59,6 +59,24 @@
       "description": "A modern school building integrated with nature.",
       "imageUrl": "https://images.unsplash.com/photo-1704476441987-4580b1380c9d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxncmVlbiUyMGFyY2hpdGVjdHVyZXxlbnwwfHx8fDE3NjEzMzU2MDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "green architecture"
+    },
+    {
+      "id": "introduction-video-bg",
+      "description": "Abstract cinematic city lights video loop.",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/poverty-perspectives.appspot.com/o/cinematic-city.mp4?alt=media&token=4a5c6a1b-4f7e-4b9b-8f3a-9e2e6d3c3f7b",
+      "imageHint": "cinematic city video"
+    },
+    {
+      "id": "futuristic-video-bg",
+      "description": "Video of a futuristic tech classroom with data visualizations.",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/poverty-perspectives.appspot.com/o/tech-classroom.mp4?alt=media&token=e93547f3-8c4d-4e9a-9e3e-4f6c449a0378",
+      "imageHint": "tech classroom video"
+    },
+    {
+      "id": "scientific-video-bg",
+      "description": "Abstract animation of neural networks and DNA strands.",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/poverty-perspectives.appspot.com/o/neural-dna.mp4?alt=media&token=8e925b4c-9b1b-4f9e-9d21-4f114c810d7a",
+      "imageHint": "neural dna video"
     }
   ]
 }

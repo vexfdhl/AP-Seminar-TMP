@@ -4,18 +4,24 @@ import { useInView } from '@/hooks/use-in-view';
 import { Typewriter } from './typewriter';
 import { cn } from '@/lib/utils';
 import React from 'react';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
-const NeuralNetworkBackground = ({ inView }: { inView: boolean }) => (
+const NeuralNetworkBackground = ({ inView }: { inView: boolean }) => {
+    const bgVideo = PlaceHolderImages.find(img => img.id === 'scientific-video-bg');
+
+    return (
     <div className="absolute inset-0 opacity-20 pointer-events-none">
-        <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute w-full h-full object-cover"
-            poster="https://picsum.photos/seed/dna/1920/1080"
-            src="https://firebasestorage.googleapis.com/v0/b/poverty-perspectives.appspot.com/o/neural-dna.mp4?alt=media&token=8e925b4c-9b1b-4f9e-9d21-4f114c810d7a"
-        />
+        {bgVideo && (
+            <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute w-full h-full object-cover"
+                poster="https://picsum.photos/seed/dna/1920/1080"
+                src={bgVideo.imageUrl}
+            />
+        )}
         <div className={cn("absolute inset-0 transition-opacity duration-1000", inView ? 'opacity-100' : 'opacity-0')}>
           <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
               <defs>
@@ -33,7 +39,8 @@ const NeuralNetworkBackground = ({ inView }: { inView: boolean }) => (
           </svg>
         </div>
     </div>
-);
+    )
+};
 
 const stats = [
     { 

@@ -8,17 +8,19 @@ import { cn } from '@/lib/utils';
 export function IntroductionSection() {
   const [ref, inView] = useInView({ once: true });
   const bgImage = PlaceHolderImages.find(img => img.id === 'intro-bg');
+  const bgVideo = PlaceHolderImages.find(img => img.id === 'introduction-video-bg');
 
   return (
     <section ref={ref} className={cn('scroll-section text-center px-4 pt-16 sm:pt-20', inView ? 'is-visible' : 'opacity-0')}>
-      {bgImage && (
-        <Image
-          src={bgImage.imageUrl}
-          alt={bgImage.description}
-          fill
-          className={cn("object-cover parallax-bg transition-transform duration-[2000ms] ease-out", inView ? 'scale-100' : 'scale-105')}
-          data-ai-hint={bgImage.imageHint}
-          priority
+      {bgVideo && (
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          poster={bgImage?.imageUrl}
+          src={bgVideo.imageUrl}
         />
       )}
       <div className="absolute inset-0 bg-[hsl(var(--background))] opacity-80" />

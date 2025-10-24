@@ -2,6 +2,7 @@
 
 import { useInView } from '@/hooks/use-in-view';
 import { cn } from '@/lib/utils';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 const chartData = [
@@ -36,20 +37,26 @@ const FutureEducationChart = ({ startAnimation }: { startAnimation: boolean }) =
   </div>
 );
 
-const DataFlowBackground = () => (
+const DataFlowBackground = () => {
+    const bgVideo = PlaceHolderImages.find(img => img.id === 'futuristic-video-bg');
+
+    return (
     <div className="absolute inset-0 overflow-hidden">
-        <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute w-full h-full object-cover"
-            poster="https://picsum.photos/seed/techbg/1920/1080"
-            src="https://firebasestorage.googleapis.com/v0/b/poverty-perspectives.appspot.com/o/tech-classroom.mp4?alt=media&token=e93547f3-8c4d-4e9a-9e3e-4f6c449a0378"
-        />
+        {bgVideo && (
+            <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute w-full h-full object-cover"
+                poster="https://picsum.photos/seed/techbg/1920/1080"
+                src={bgVideo.imageUrl}
+            />
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-[hsl(177,49%,36%)]/50 to-[hsl(180,100%,40%)]/50" />
     </div>
-);
+    )
+};
 
 export function FuturisticSection() {
     const [ref, inView] = useInView({ once: true });
