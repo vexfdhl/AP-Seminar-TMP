@@ -103,13 +103,14 @@ body {
   }
 
   .is-visible .parallax-bg {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
   
   .is-visible .animate-item {
     animation-duration: 0.8s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: both;
+    animation-iteration-count: 1;
   }
 
   .title-underline {
@@ -126,7 +127,7 @@ body {
     width: 0;
     height: 3px;
     background-color: hsl(var(--primary));
-    transition: width 0.6s ease-in-out;
+    transition: width 0.6s ease-out;
     box-shadow: 0 0 8px hsl(var(--primary) / 0.8);
   }
   
@@ -173,7 +174,7 @@ body {
     background-size: 200% 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: gold-shimmer 3s infinite linear;
+    animation: gold-shimmer 3s ease-in-out 1;
   }
 
   @keyframes draw-line {

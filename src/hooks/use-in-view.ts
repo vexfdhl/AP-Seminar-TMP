@@ -4,10 +4,10 @@ import { useState, useEffect, useRef } from 'react';
 
 type UseInViewOptions = {
   threshold?: number;
-  triggerOnce?: boolean;
+  once?: boolean;
 };
 
-export function useInView({ threshold = 0.2, triggerOnce = true }: UseInViewOptions = {}) {
+export function useInView({ threshold = 0.2, once = false }: UseInViewOptions = {}) {
   const [inView, setInView] = useState(false);
   const ref = useRef<any>(null);
 
@@ -15,11 +15,11 @@ export function useInView({ threshold = 0.2, triggerOnce = true }: UseInViewOpti
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         setInView(true);
-        if (triggerOnce) {
+        if (once) {
           observer.unobserve(entry.target);
         }
       } else {
-        if (!triggerOnce) {
+        if (!once) {
             setInView(false);
         }
       }
@@ -35,7 +35,7 @@ export function useInView({ threshold = 0.2, triggerOnce = true }: UseInViewOpti
         observer.unobserve(currentRef);
       }
     };
-  }, [ref, threshold, triggerOnce]);
+  }, [ref, threshold, once]);
 
   return [ref, inView] as const;
 }

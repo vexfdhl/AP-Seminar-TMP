@@ -6,7 +6,7 @@ import { useInView } from '@/hooks/use-in-view';
 import { cn } from '@/lib/utils';
 
 export function IntroductionSection() {
-  const [ref, inView] = useInView();
+  const [ref, inView] = useInView({ once: true });
   const bgImage = PlaceHolderImages.find(img => img.id === 'intro-bg');
 
   return (
@@ -16,12 +16,12 @@ export function IntroductionSection() {
           src={bgImage.imageUrl}
           alt={bgImage.description}
           fill
-          className={cn("object-cover parallax-bg", inView ? 'scale-110' : 'scale-100')}
+          className={cn("object-cover parallax-bg transition-transform duration-[2000ms] ease-out", inView ? 'scale-100' : 'scale-105')}
           data-ai-hint={bgImage.imageHint}
           priority
         />
       )}
-      <div className="absolute inset-0 bg-background/80" />
+      <div className="absolute inset-0 bg-[hsl(var(--background))] opacity-80" />
       <div className="relative z-10 flex flex-col items-center gap-8">
         <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl tracking-[1.5px] uppercase animate-item title-underline pb-4" style={{ animationName: 'fade-up', animationDelay: '0.5s' }}>
           Poverty: The Invisible Force
