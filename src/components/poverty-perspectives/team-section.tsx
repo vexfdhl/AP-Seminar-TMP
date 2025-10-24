@@ -4,7 +4,6 @@ import { useInView } from '@/hooks/use-in-view';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { ReferencesSection } from './references-section';
 
 const teamMembers = [
   {
@@ -49,48 +48,45 @@ export function TeamSection() {
   const [ref, inView] = useInView({ once: true, threshold: 0.1 });
 
   return (
-    <section ref={ref} className={cn('scroll-section bg-background py-16 px-4', inView ? 'is-visible' : 'opacity-0')}>
-      <div className="relative z-10 w-full max-w-4xl mx-auto flex flex-col items-center text-center gap-12">
+    <section ref={ref} className={cn('bg-background py-16 px-4 sm:py-24', inView ? 'is-visible' : 'opacity-0')}>
+      <div className="relative z-10 max-w-7xl mx-auto flex flex-col items-center text-center gap-12 lg:gap-16">
         <div className="animate-item" style={{ animationName: 'fade-up', animationDelay: '0.2s' }}>
           <h2 className="font-headline text-3xl md:text-4xl title-underline pb-4">Team &amp; Advisor</h2>
         </div>
 
-        <div className="w-full space-y-8">
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-x-12 lg:gap-y-12">
           {teamMembers.map((member, index) => {
             const image = PlaceHolderImages.find(img => img.id === member.imageId);
             return (
-              <div key={member.name}>
-                <div 
-                  className={cn("animate-item", inView ? 'is-visible' : 'opacity-0')}
-                  style={{ animationName: 'fade-up', animationDelay: `${0.4 + index * 0.1}s` }}
-                >
-                  <div className="group flex flex-col md:flex-row items-center gap-6 md:gap-8 w-full text-left">
-                    <div className="relative w-full md:w-2/5 h-48 md:h-52 rounded-lg overflow-hidden shadow-md">
-                      {image && (
-                        <Image
-                          src={image.imageUrl}
-                          alt={`Portrait/scene for ${member.name} — ${member.role}`}
-                          fill
-                          className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
-                          data-ai-hint={image.imageHint}
-                        />
-                      )}
-                      <div className="absolute inset-0 bg-[#0B3D3D]/60" />
-                    </div>
-                    <div className="w-full md:w-3/5">
-                      <h3 className="font-headline text-2xl md:text-3xl font-semibold text-foreground">{member.name}</h3>
-                      <p className="font-body text-xs uppercase tracking-[2px] text-primary mt-1 mb-3">{member.role}</p>
-                      <p className="font-body text-base text-muted-foreground max-w-[65ch]">{member.focus}</p>
-                    </div>
+              <div 
+                key={member.name}
+                className={cn("animate-item", inView ? 'is-visible' : 'opacity-0')}
+                style={{ animationName: 'fade-up', animationDelay: `${0.4 + index * 0.1}s` }}
+              >
+                <div className="group flex flex-col md:flex-row items-center gap-6 md:gap-8 w-full text-left bg-muted/10 p-4 rounded-lg border border-border transition-shadow hover:shadow-lg">
+                  <div className="relative w-full md:w-2/5 aspect-video md:aspect-[4/3] rounded-lg overflow-hidden shadow-md flex-shrink-0">
+                    {image && (
+                      <Image
+                        src={image.imageUrl}
+                        alt={`Portrait/scene for ${member.name} — ${member.role}`}
+                        fill
+                        className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                        data-ai-hint={image.imageHint}
+                        loading="lazy"
+                      />
+                    )}
+                    <div className="absolute inset-0 bg-background/60" />
+                  </div>
+                  <div className="w-full md:w-3/5 flex flex-col justify-center">
+                    <h3 className="font-headline text-2xl md:text-3xl font-semibold text-foreground">{member.name}</h3>
+                    <p className="font-body text-xs uppercase tracking-[2px] text-primary mt-1 mb-3">{member.role}</p>
+                    <p className="font-body text-base text-muted-foreground max-w-[65ch]">{member.focus}</p>
                   </div>
                 </div>
-                {index < teamMembers.length - 1 && <hr className="border-t border-border my-8" />}
               </div>
             );
           })}
         </div>
-        
-        <ReferencesSection />
       </div>
     </section>
   );
