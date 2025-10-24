@@ -1,3 +1,4 @@
+
 import { IntroductionSection } from '@/components/poverty-perspectives/introduction-section';
 import { CulturalSocialSection } from '@/components/poverty-perspectives/cultural-social-section';
 import { ArtisticPhilosophicalSection } from '@/components/poverty-perspectives/artistic-philosophical-section';

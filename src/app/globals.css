@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -106,11 +107,15 @@ body {
     transform: scale(1.05);
   }
   
+  .animate-item {
+    transition: opacity 0.65s ease-out, transform 0.65s ease-out;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
   .is-visible .animate-item {
-    animation-duration: 0.8s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: both;
-    animation-iteration-count: 1;
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .title-underline {

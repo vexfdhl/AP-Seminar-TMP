@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useInView } from '@/hooks/use-in-view';
@@ -48,9 +49,9 @@ export function TeamSection() {
   const [ref, inView] = useInView({ once: true, threshold: 0.1 });
 
   return (
-    <section ref={ref} className={cn('bg-background py-16 px-4 sm:py-24', inView ? 'is-visible' : 'opacity-0')}>
+    <section ref={ref} className={cn('bg-background py-16 px-4 sm:py-24', inView ? 'is-visible' : '')}>
       <div className="relative z-10 max-w-7xl mx-auto flex flex-col items-center text-center gap-12 lg:gap-16">
-        <div className="animate-item" style={{ animationName: 'fade-up', animationDelay: '0.2s' }}>
+        <div className="animate-item" style={{ transitionDelay: '200ms' }}>
           <h2 className="font-headline text-3xl md:text-4xl title-underline pb-4">Team &amp; Advisor</h2>
         </div>
 
@@ -60,8 +61,12 @@ export function TeamSection() {
             return (
               <div 
                 key={member.name}
-                className={cn("animate-item", inView ? 'is-visible' : 'opacity-0')}
-                style={{ animationName: 'fade-up', animationDelay: `${0.4 + index * 0.1}s` }}
+                className={cn("animate-item")}
+                style={{ 
+                  transitionDelay: `${300 + index * 120}ms`,
+                  transform: index % 2 === 0 ? 'translateX(-18px)' : 'translateX(18px)',
+                  opacity: 0,
+                 }}
               >
                 <div className="group flex flex-col md:flex-row items-center gap-6 md:gap-8 w-full text-left bg-muted/10 p-4 rounded-lg border border-border transition-shadow hover:shadow-lg">
                   <div className="relative w-full md:w-2/5 aspect-video md:aspect-[4/3] rounded-lg overflow-hidden shadow-md flex-shrink-0">

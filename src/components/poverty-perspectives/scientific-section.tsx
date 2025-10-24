@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useInView } from '@/hooks/use-in-view';
@@ -54,32 +55,32 @@ const stats = [
 ];
 
 export function ScientificSection() {
-    const [ref, inView] = useInView({ threshold: 0.4, once: true });
+    const [ref, inView] = useInView({ threshold: 0.25, once: true });
 
     return (
-        <section ref={ref} className={cn('scroll-section bg-background', inView ? 'is-visible' : 'opacity-0')}>
+        <section ref={ref} className={cn('scroll-section bg-background', inView ? 'is-visible' : '')}>
             <NeuralNetworkBackground inView={inView} />
             <div className="absolute inset-0 bg-[hsl(var(--background))] opacity-80" />
 
             <div className="relative z-10 w-full max-w-4xl mx-auto p-8 flex flex-col items-center text-center gap-6">
-                <div className="animate-item" style={{ animationName: 'fade-up', animationDelay: '0.2s' }}>
+                <div className="animate-item" style={{ transitionDelay: '200ms' }}>
                     <h2 className="font-headline text-3xl md:text-4xl title-underline pb-4">Pravin Yadav <br /><span className="text-xl font-body">(Scientific Lens)</span></h2>
                 </div>
-                <p className="font-body text-base md:text-lg max-w-[65ch] animate-item" style={{ animationName: 'fade-up', animationDelay: '0.4s' }}>
+                <p className="font-body text-base md:text-lg max-w-[65ch] animate-item" style={{ transitionDelay: '400ms' }}>
                     <Typewriter text="Poverty affects biology itself." speed={30} start={inView} delay={400} /> Research from Northwestern University shows over 2,500 DNA sites altered by chronic poverty stress (McDade et al., 2021). Harvard’s ABCD study found reduced hippocampal size and disrupted white matter in low-income youth, impairing memory and learning (Weissman et al., 2023). Brain plasticity can be rebuilt with stable environments and emotional support, proving education and neuroscience must unite.
                 </p>
 
-                <div className={cn("my-4 animate-item transition-all duration-1000 ease-out", inView ? 'opacity-100' : 'opacity-0')} style={{ animationDelay: '0.6s' }}>
+                <div className={cn("my-4 animate-item")} style={{ transitionDelay: '600ms' }}>
                     <p className="font-accent italic text-xl md:text-2xl p-4 pull-quote">
                         “Poverty becomes written into our biology.”
                     </p>
                 </div>
                 
-                <div className="bg-[#F5F3E7E6] text-card-foreground p-6 md:p-8 rounded-2xl border border-emerald-300/20 shadow-md backdrop-blur-md max-w-3xl animate-item w-full" style={{ animationName: 'fade-up', animationDelay: '0.8s' }}>
+                <div className="bg-[#F5F3E7E6] text-card-foreground p-6 md:p-8 rounded-2xl border border-emerald-300/20 shadow-md backdrop-blur-md max-w-3xl animate-item w-full" style={{ transitionDelay: '750ms' }}>
                     <div className="relative grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4">
                         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[60%] w-[1px] bg-emerald-200 hidden md:block" />
                         {stats.map((stat, index) => (
-                            <div key={index} className={cn("flex flex-col text-center md:text-left gap-1 animate-item", inView ? 'is-visible' : 'opacity-0')} style={{ animationName: 'fade-up', animationDelay: `${1 + index * 0.4}s` }}>
+                            <div key={index} className={cn("flex flex-col text-center md:text-left gap-1 animate-item")} style={{ transitionDelay: `${850 + index * 120}ms` }}>
                                 <h3 className="font-headline text-md font-semibold text-emerald-900">{stat.title}</h3>
                                 <p className="text-sm text-teal-950">{stat.description}</p>
                             </div>

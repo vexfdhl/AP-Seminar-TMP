@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useInView } from '@/hooks/use-in-view';
@@ -8,11 +9,11 @@ export function ReferencesSection() {
   const [ref, inView] = useInView({ once: true, threshold: 0.1 });
 
   return (
-    <div ref={ref} className={cn('w-full bg-background py-16', inView ? 'is-visible' : 'opacity-0')}>
+    <div ref={ref} className={cn('w-full bg-background py-16', inView ? 'is-visible' : '')}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div 
-                className={cn("animate-item", inView ? 'is-visible' : 'opacity-0')}
-                style={{ animationName: 'fade-up', animationDelay: '0.2s' }}
+                className={cn("animate-item")}
+                style={{ transitionDelay: '200ms' }}
             >
                 <h3 className="text-center font-body text-sm uppercase tracking-[2px] text-muted-foreground mb-4">References &amp; Documentation</h3>
                 <div className="flex justify-center">
