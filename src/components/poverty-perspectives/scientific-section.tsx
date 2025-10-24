@@ -56,12 +56,12 @@ export function ScientificSection() {
                         “Poverty affects biology itself. Research from Northwestern University shows over 2,500 DNA sites altered by chronic poverty stress (McDade et al., 2021). Harvard’s ABCD study found reduced hippocampal size and disrupted white matter in low-income youth, impairing memory and learning (Weissman et al., 2023). Brain plasticity can be rebuilt with stable environments and emotional support, proving education and neuroscience must unite.”
                     </p>
                 </div>
-                <div className="flex flex-col gap-4 font-code text-sm md:text-base bg-secondary/5 backdrop-blur-md p-6 rounded-2xl border border-primary/20 shadow-lg animate-item" style={{ animationName: 'fade-up', animationDelay: '0.6s' }}>
-                    <h3 className="font-headline text-lg mb-2 text-accent">Key Stats</h3>
+                <div className="bg-[#F5F3E7E0] text-card-foreground p-6 md:p-7 rounded-[20px] border border-emerald-200 shadow-[0_8px_24px_rgba(0,0,0,0.12)] backdrop-blur-sm max-w-3xl animate-item w-full flex flex-col gap-4 font-code text-sm md:text-base" style={{ animationName: 'fade-up', animationDelay: '0.6s' }}>
+                    <h3 className="font-headline text-lg mb-2 font-semibold text-emerald-900">Key Stats</h3>
                     <ul className="space-y-3">
                         {stats.map((stat, index) => (
                            <li key={index} className="flex items-start">
-                             <span className="text-accent mr-2 mt-1 shrink-0">&gt;</span>
+                             <span className="text-emerald-900 mr-2 mt-1 shrink-0">&gt;</span>
                              <Typewriter text={stat} speed={20} start={inView} />
                            </li> 
                         ))}

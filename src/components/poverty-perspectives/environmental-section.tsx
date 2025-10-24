@@ -29,9 +29,9 @@ export function EnvironmentalSection() {
           <p className="font-body text-base md:text-lg animate-item" style={{ animationName: 'fade-up', animationDelay: '0.4s' }}>
             “The physical environment is a silent teacher. Poor housing, polluted streets, and unsafe neighborhoods impair student focus and attendance. Environmental neglect intensifies trauma — proving that education cannot thrive where safety is absent (CDC, 2022).”
           </p>
-          <div className="bg-secondary/5 backdrop-blur-md text-card-foreground p-6 rounded-2xl border border-primary/20 shadow-lg animate-item" style={{ animationName: 'fade-up', animationDelay: '0.6s' }}>
-            <h3 className="font-headline text-lg mb-2 text-primary">Statistic</h3>
-            <p className="text-sm">
+          <div className="bg-[#F5F3E7E0] text-card-foreground p-6 md:p-7 rounded-[20px] border border-emerald-200 shadow-[0_8px_24px_rgba(0,0,0,0.12)] backdrop-blur-sm max-w-3xl animate-item" style={{ animationName: 'fade-up', animationDelay: '0.6s' }}>
+            <h3 className="font-headline text-lg mb-2 font-semibold text-emerald-900">Statistic</h3>
+            <p className="text-[1rem] md:text-[1.0625rem] leading-relaxed">
               “School conditions account for nearly 20% of learning loss in low-income districts (CDC, 2022).”
             </p>
           </div>

@@ -27,6 +27,7 @@ const FutureEducationChart = ({ startAnimation }: { startAnimation: boolean }) =
             backdropFilter: 'blur(10px)',
             border: '1px solid hsl(var(--primary) / 0.2)',
             borderRadius: '1rem',
+            color: 'hsl(var(--foreground))'
           }}
         />
         <Bar dataKey="value" fill="hsl(var(--primary))" radius={[0, 4, 4, 0]} isAnimationActive={startAnimation} animationDuration={800} animationEasing="ease-out" />
@@ -64,9 +65,9 @@ export function FuturisticSection() {
           <p className="font-body text-base md:text-lg animate-item" style={{ animationName: 'fade-up', animationDelay: '0.4s' }}>
             “In a future of automation and climate instability, poverty risks deepening as technology divides classrooms. Education funding in Baltimore has declined, while AI and digital skills become basic requirements. Without intervention, access to future employment and upward mobility will remain stratified by income (U.S. Census Bureau, 2023).”
           </p>
-          <div className="bg-secondary/5 backdrop-blur-md text-card-foreground p-6 rounded-2xl border border-primary/20 shadow-lg animate-item" style={{ animationName: 'fade-up', animationDelay: '0.6s' }}>
-            <h3 className="font-headline text-lg mb-2 text-primary">Statistic</h3>
-            <p className="text-sm">
+          <div className="bg-[#F5F3E7E0] text-card-foreground p-6 md:p-7 rounded-[20px] border border-emerald-200 shadow-[0_8px_24px_rgba(0,0,0,0.12)] backdrop-blur-sm max-w-3xl animate-item" style={{ animationName: 'fade-up', animationDelay: '0.6s' }}>
+            <h3 className="font-headline text-lg mb-2 font-semibold text-emerald-900">Statistic</h3>
+            <p className="text-[1rem] md:text-[1.0625rem] leading-relaxed">
               “Baltimore’s poverty rate: 20.1% (2023). Education funding projected to decrease by 6% over 5 years.”
             </p>
           </div>
