@@ -11,7 +11,7 @@ const NeuralNetworkBackground = ({ inView }: { inView: boolean }) => {
     const bgVideo = PlaceHolderImages.find(img => img.id === 'scientific-video-bg');
 
     return (
-    <div className="absolute inset-0 opacity-20 pointer-events-none">
+    <div className="absolute inset-0 opacity-15 pointer-events-none">
         {bgVideo && (
             <video
                 autoPlay
@@ -60,7 +60,7 @@ export function ScientificSection() {
     return (
         <section ref={ref} className={cn('scroll-section bg-background', inView ? 'is-visible' : '')}>
             <NeuralNetworkBackground inView={inView} />
-            <div className="absolute inset-0 bg-[hsl(var(--background))] opacity-80" />
+            <div className="absolute inset-0 bg-[hsl(var(--background))] opacity-75" />
 
             <div className="relative z-10 w-full max-w-4xl mx-auto p-8 flex flex-col items-center text-center gap-6">
                 <div className="animate-item" style={{ transitionDelay: '200ms' }}>
@@ -78,11 +78,11 @@ export function ScientificSection() {
                 
                 <div className="glassmorphism-card max-w-3xl animate-item w-full" style={{ transitionDelay: '750ms' }}>
                     <div className="relative grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4">
-                        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[60%] w-[1px] bg-emerald-200 hidden md:block" />
+                        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[60%] w-[1px] bg-emerald-200/50 hidden md:block" />
                         {stats.map((stat, index) => (
                             <div key={index} className={cn("flex flex-col text-center md:text-left gap-1 animate-item")} style={{ transitionDelay: `${850 + index * 120}ms` }}>
-                                <h3 className="font-headline text-md font-semibold text-emerald-900">{stat.title}</h3>
-                                <p className="text-sm text-teal-950">{stat.description}</p>
+                                <h3 className="font-headline text-md font-semibold">{stat.title}</h3>
+                                <p className="text-sm">{stat.description}</p>
                             </div>
                         ))}
                     </div>

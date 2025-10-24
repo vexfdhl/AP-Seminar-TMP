@@ -35,7 +35,7 @@ export function SolutionsSection() {
     return (
         <section ref={ref} className={cn('scroll-section bg-background', inView ? 'is-visible' : '')}>
             <SolutionConnections inView={inView} />
-            <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary/20 rounded-full blur-3xl -z-10" />
+            <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary/10 rounded-full blur-3xl -z-10" />
 
             <div className="relative z-10 w-full max-w-5xl mx-auto p-8 flex flex-col items-center text-center gap-8">
                 <h2 className="font-headline text-3xl md:text-4xl title-underline pb-4 animate-item" style={{transitionDelay: '200ms'}}>
@@ -50,27 +50,27 @@ export function SolutionsSection() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
                       {solutions.slice(0, 3).map((solution, index) => (
                           <div key={index} className={cn("glassmorphism-card p-4 text-left transition-transform duration-300 hover:scale-105 animate-item")} style={{ transitionDelay: `${550 + index * 120}ms` }}>
-                            <p className="text-sm font-semibold text-emerald-900 mb-1">{solution.title}</p>
-                            <p className="text-xs text-teal-950">{solution.description}</p>
+                            <p className="text-sm font-semibold mb-1">{solution.title}</p>
+                            <p className="text-xs">{solution.description}</p>
                           </div>
                       ))}
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 justify-center">
                       {solutions.slice(3).map((solution, index) => (
                           <div key={index} className={cn("glassmorphism-card p-4 text-left transition-transform duration-300 hover:scale-105 sm:last:col-start-auto animate-item")} style={{ transitionDelay: `${910 + index * 120}ms` }}>
-                            <p className="text-sm font-semibold text-emerald-900 mb-1">{solution.title}</p>
-                            <p className="text-xs text-teal-950">{solution.description}</p>
+                            <p className="text-sm font-semibold mb-1">{solution.title}</p>
+                            <p className="text-xs">{solution.description}</p>
                           </div>
                       ))}
                     </div>
                 </div>
 
                 <div className="glassmorphism-card max-w-3xl animate-item w-full" style={{ transitionDelay: '1200ms' }}>
-                    <h3 className="font-accent italic text-lg mb-2 text-emerald-900 relative inline-block">
+                    <h3 className="font-accent italic text-lg mb-2 relative inline-block">
                         Implementation Note
                         <span className="absolute bottom-[-0.25rem] left-0 w-2/3 h-[2px] bg-yellow-400"></span>
                     </h3>
-                    <p className="text-[1rem] md:text-[1.0625rem] leading-relaxed text-left text-teal-950">
+                    <p className="text-[1rem] md:text-[1.0625rem] leading-relaxed text-left">
                         Integrated solutions require cross-sector collaboration between schools, city planning, and public health departments.
                     </p>
                 </div>

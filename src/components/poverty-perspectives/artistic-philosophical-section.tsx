@@ -22,7 +22,7 @@ export function ArtisticPhilosophicalSection() {
           data-ai-hint={bgImage.imageHint}
         />
       )}
-      <div className="absolute inset-0 bg-[hsl(var(--background))] opacity-80" />
+      <div className="absolute inset-0 bg-[hsl(var(--background))] opacity-75" />
       <div className="absolute inset-0 vignette-gold" />
 
       <div className="relative z-10 w-full max-w-4xl mx-auto p-8 flex flex-col items-center text-center gap-6">
@@ -42,7 +42,7 @@ export function ArtisticPhilosophicalSection() {
         </div>
         
         <div className="glassmorphism-card max-w-3xl animate-item w-full" style={{ transitionDelay: '700ms' }}>
-          <h3 className="font-headline text-lg mb-2 font-semibold text-emerald-900">Statistic</h3>
+          <h3 className="font-headline text-lg mb-2 font-semibold">Statistic</h3>
           <p className="text-[1rem] md:text-[1.0625rem] leading-relaxed">
             “Baltimore loses 1.5 million instructional hours yearly due to failing infrastructure; artistic education helps re-engage affected youth (City Journal, 2025).”
           </p>

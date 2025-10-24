@@ -219,12 +219,28 @@ body {
 }
 
 .glassmorphism-card {
-  background-color: hsl(var(--card) / 0.08);
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
-  border: 1px solid hsl(var(--primary) / 0.2);
-  box-shadow: 0 4px 20px -2px hsl(var(--background) / 0.5);
-  border-radius: 20px;
+  background-color: hsl(var(--card) / 0.15);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border: 1px solid hsl(var(--primary) / 0.3);
+  box-shadow: 0 10px 30px -5px hsl(var(--background) / 0.5);
+  border-radius: 1.25rem; /* 20px */
   color: hsl(var(--card-foreground));
-  padding: 1.75rem;
+  padding: 2rem; /* increased padding */
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glassmorphism-card:hover {
+  background-color: hsl(var(--card) / 0.2);
+  border-color: hsl(var(--primary) / 0.4);
+}
+
+.glassmorphism-card h3 {
+  color: hsl(var(--card-foreground));
+  opacity: 0.95;
+}
+
+.glassmorphism-card p {
+  color: hsl(var(--card-foreground));
+  opacity: 0.95;
 }

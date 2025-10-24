@@ -67,7 +67,7 @@ export function TeamSection() {
                  }}
                  aria-label={`${member.name} - ${member.role} - ${member.focus}`}
               >
-                <div className="group flex flex-col md:flex-row items-center gap-6 md:gap-8 w-full text-left bg-muted/10 p-4 rounded-lg border border-border transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                <div className="group flex flex-col md:flex-row items-center gap-6 md:gap-8 w-full text-left bg-muted/10 p-6 rounded-2xl border border-border transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                   <div className="relative w-full md:w-2/5 aspect-video md:aspect-[4/3] rounded-lg overflow-hidden shadow-md flex-shrink-0">
                     {image && (
                       <Image
@@ -79,7 +79,7 @@ export function TeamSection() {
                         loading="lazy"
                       />
                     )}
-                    <div className="absolute inset-0 bg-background/50" />
+                    <div className="absolute inset-0 bg-background/40" />
                   </div>
                   <div className="w-full md:w-3/5 flex flex-col justify-center">
                     <h3 className="font-headline text-2xl md:text-3xl font-semibold text-foreground">{member.name}</h3>

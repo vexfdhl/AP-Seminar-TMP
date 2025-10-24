@@ -54,7 +54,7 @@ const DataFlowBackground = () => {
                 src={bgVideo.imageUrl}
             />
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(177,49%,36%)]/50 to-[hsl(180,100%,40%)]/50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(177,49%,36%)]/40 to-[hsl(180,100%,40%)]/40" />
     </div>
     )
 };
@@ -88,7 +88,7 @@ export function FuturisticSection() {
         </div>
 
         <div className="glassmorphism-card max-w-3xl animate-item w-full" style={{ transitionDelay: '700ms' }}>
-          <h3 className="font-headline text-lg mb-2 font-semibold text-emerald-900">Statistic</h3>
+          <h3 className="font-headline text-lg mb-2 font-semibold">Statistic</h3>
           <p className="text-[1rem] md:text-[1.0625rem] leading-relaxed">
             “Baltimore’s poverty rate: 20.1% (2023). Education funding projected to decrease by 6% over 5 years.”
           </p>
