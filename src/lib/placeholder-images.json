@@ -1,3 +1,28 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "intro-bg",
+      "description": "Cinematic aerial of a city blending two coastlines",
+      "imageUrl": "https://images.unsplash.com/photo-1472146936668-d987bf0a6e38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjaXR5JTIwYWVyaWFsfGVufDB8fHx8MTc2MTI2MTI5MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "city aerial"
+    },
+    {
+      "id": "cultural-bg",
+      "description": "Urban neighborhood with schools and community buildings",
+      "imageUrl": "https://images.unsplash.com/photo-1746547715531-263d2f44ee3b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx1cmJhbiUyMG5laWdoYm9yaG9vZHxlbnwwfHx8fDE3NjEyNzM3Nzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "urban neighborhood"
+    },
+    {
+      "id": "artistic-bg",
+      "description": "Textured wall with a mural and desaturated city lights overlay",
+      "imageUrl": "https://images.unsplash.com/photo-1610000533241-dff7d4499a3c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtdXJhbCUyMHRleHR1cmV8ZW58MHx8fHwxNzYxMjczMzk0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mural texture"
+    },
+    {
+      "id": "environmental-bg",
+      "description": "Aerial view of a city grid blending into a green forest",
+      "imageUrl": "https://images.unsplash.com/photo-1732213429453-1951a5f4a1fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjaXR5JTIwZm9yZXN0fGVufDB8fHx8MTc2MTI3MzM5NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "city forest"
+    }
+  ]
 }

@@ -1,3 +1,21 @@
+import { IntroductionSection } from '@/components/poverty-perspectives/introduction-section';
+import { CulturalSocialSection } from '@/components/poverty-perspectives/cultural-social-section';
+import { ArtisticPhilosophicalSection } from '@/components/poverty-perspectives/artistic-philosophical-section';
+import { FuturisticSection } from '@/components/poverty-perspectives/futuristic-section';
+import { EnvironmentalSection } from '@/components/poverty-perspectives/environmental-section';
+import { ScientificSection } from '@/components/poverty-perspectives/scientific-section';
+import { SolutionsSection } from '@/components/poverty-perspectives/solutions-section';
+
 export default function Home() {
-  return <></>;
+  return (
+    <main className="scroll-container">
+      <IntroductionSection />
+      <CulturalSocialSection />
+      <ArtisticPhilosophicalSection />
+      <FuturisticSection />
+      <EnvironmentalSection />
+      <ScientificSection />
+      <SolutionsSection />
+    </main>
+  );
 }
