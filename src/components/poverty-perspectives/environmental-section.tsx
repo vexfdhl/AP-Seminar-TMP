@@ -43,26 +43,26 @@ export function EnvironmentalSection() {
           src={bgImage.imageUrl}
           alt={bgImage.description}
           fill
-          className="object-cover"
+          className={cn("object-cover parallax-bg", inView ? 'scale-110' : 'scale-100')}
           data-ai-hint={bgImage.imageHint}
         />
       )}
-      <div className="absolute inset-0 bg-green-900/50" />
+      <div className="absolute inset-0 bg-green-900/70" />
       <WaveAnimation />
-      <div className="relative z-10 w-full max-w-7xl mx-auto p-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center animate-item" style={{ animationName: 'fade-up' }}>
-        <div className="flex flex-col gap-6 md:pr-10">
-          <h2 className="font-headline text-3xl md:text-4xl">Xenia Benitez <br /><span className="text-xl font-body">(Environmental Lens)</span></h2>
-          <p className="font-body text-base md:text-lg">
+      <div className="relative z-10 w-full max-w-7xl mx-auto p-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="flex flex-col gap-6 md:pr-10 animate-item" style={{ animationName: 'slide-in-left', animationDelay: '0.2s' }}>
+          <h2 className="font-headline text-3xl md:text-4xl title-underline pb-4">Xenia Benitez <br /><span className="text-xl font-body">(Environmental Lens)</span></h2>
+          <p className="font-body text-base md:text-lg animate-item" style={{ animationName: 'fade-up', animationDelay: '0.4s' }}>
             “The physical environment is a silent teacher. Poor housing, polluted streets, and unsafe neighborhoods impair student focus and attendance. Environmental neglect intensifies trauma — proving that education cannot thrive where safety is absent (CDC, 2022).”
           </p>
-          <div className="bg-secondary/80 backdrop-blur-sm text-secondary-foreground p-6 rounded-lg">
-            <h3 className="font-headline text-lg mb-2">Statistic</h3>
+          <div className="bg-secondary/20 backdrop-blur-md text-card-foreground p-6 rounded-lg border border-primary/50 shadow-lg animate-item" style={{ animationName: 'fade-up', animationDelay: '0.6s' }}>
+            <h3 className="font-headline text-lg mb-2 text-primary">Statistic</h3>
             <p className="text-sm">
               “School conditions account for nearly 20% of learning loss in low-income districts (CDC, 2022).”
             </p>
           </div>
         </div>
-        <div className="relative h-64 w-64 opacity-20 hidden md:block">
+        <div className="relative h-64 w-64 opacity-20 hidden md:block animate-item" style={{ animationName: 'zoom-in', animationDelay: '0.5s' }}>
             <HousingIcon />
         </div>
       </div>

@@ -57,22 +57,22 @@ export function FuturisticSection() {
     const [ref, inView] = useInView();
 
   return (
-    <section ref={ref} className={cn('scroll-section bg-gradient-to-b from-background to-accent', inView ? 'is-visible' : 'opacity-0')}>
+    <section ref={ref} className={cn('scroll-section bg-gradient-to-b from-background to-accent/80', inView ? 'is-visible' : 'opacity-0')}>
       <DataFlowBackground />
-      <div className="relative z-10 w-full max-w-7xl mx-auto p-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center animate-item" style={{animationName: 'zoom-in'}}>
-        <div className="flex flex-col gap-6">
-          <h2 className="font-headline text-3xl md:text-4xl">Mireya Gonzalez <br /><span className="text-xl font-body">(Futuristic Lens)</span></h2>
-          <p className="font-body text-base md:text-lg">
+      <div className="relative z-10 w-full max-w-7xl mx-auto p-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="flex flex-col gap-6 animate-item" style={{animationName: 'slide-in-left', animationDelay: '0.2s'}}>
+          <h2 className="font-headline text-3xl md:text-4xl title-underline pb-4">Mireya Gonzalez <br /><span className="text-xl font-body">(Futuristic Lens)</span></h2>
+          <p className="font-body text-base md:text-lg animate-item" style={{ animationName: 'fade-up', animationDelay: '0.4s' }}>
             “In a future of automation and climate instability, poverty risks deepening as technology divides classrooms. Education funding in Baltimore has declined, while AI and digital skills become basic requirements. Without intervention, access to future employment and upward mobility will remain stratified by income (U.S. Census Bureau, 2023).”
           </p>
-          <div className="bg-secondary/80 backdrop-blur-sm text-secondary-foreground p-6 rounded-lg">
-            <h3 className="font-headline text-lg mb-2">Statistic</h3>
+          <div className="bg-secondary/20 backdrop-blur-md text-card-foreground p-6 rounded-lg border border-primary/50 shadow-lg animate-item" style={{ animationName: 'fade-up', animationDelay: '0.6s' }}>
+            <h3 className="font-headline text-lg mb-2 text-primary">Statistic</h3>
             <p className="text-sm">
               “Baltimore’s poverty rate: 20.1% (2023). Education funding projected to decrease by 6% over 5 years.”
             </p>
           </div>
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 animate-item" style={{animationName: 'zoom-in', animationDelay: '0.5s'}}>
           <h3 className="font-headline text-xl text-center">Education Risk ↑ / Funding ↓</h3>
           <EducationChart startAnimation={inView} />
         </div>

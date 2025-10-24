@@ -16,21 +16,21 @@ export function IntroductionSection() {
           src={bgImage.imageUrl}
           alt={bgImage.description}
           fill
-          className="object-cover"
+          className={cn("object-cover parallax-bg", inView ? 'scale-110' : 'scale-100')}
           data-ai-hint={bgImage.imageHint}
           priority
         />
       )}
-      <div className="absolute inset-0 bg-background/70" />
+      <div className="absolute inset-0 bg-background/80" />
       <div className="relative z-10 flex flex-col items-center gap-8">
-        <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl tracking-[1.5px] uppercase animate-item" style={{ animationName: 'fade-up', animationDelay: '0.5s' }}>
+        <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl tracking-[1.5px] uppercase animate-item title-underline pb-4" style={{ animationName: 'fade-up', animationDelay: '0.5s' }}>
           Poverty: The Invisible Force
         </h1>
         <p className="font-body text-lg md:text-xl lg:text-2xl tracking-[2px] animate-item" style={{ animationName: 'fade-up', animationDelay: '0.8s' }}>
           An AP Seminar Interdisciplinary Presentation
         </p>
         <div
-          className="bg-secondary text-secondary-foreground p-8 md:p-10 rounded-2xl max-w-3xl animate-item"
+          className="bg-secondary/20 backdrop-blur-md text-card-foreground p-8 md:p-10 rounded-2xl max-w-3xl border border-primary/30 animate-item"
           style={{ animationName: 'fade-up', animationDelay: '1.0s' }}
         >
           <p className="text-base md:text-lg">
