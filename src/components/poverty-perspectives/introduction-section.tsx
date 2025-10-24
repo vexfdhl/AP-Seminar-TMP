@@ -23,23 +23,29 @@ export function IntroductionSection() {
       )}
       <div className="absolute inset-0 bg-[hsl(var(--background))] opacity-80" />
       <div className="relative z-10 flex flex-col items-center gap-8">
-        <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl tracking-[1.5px] uppercase animate-item title-underline pb-4" style={{ animationName: 'fade-up', animationDelay: '0.5s' }}>
-          Poverty: The Invisible Force
-        </h1>
-        <p className="font-body text-lg md:text-xl lg:text-2xl tracking-[2px] animate-item" style={{ animationName: 'fade-up', animationDelay: '0.8s' }}>
-          An AP Seminar Interdisciplinary Presentation
-        </p>
+        <div className="animate-item" style={{ animationName: 'fade-up', animationDelay: '0.5s' }}>
+          <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl tracking-[1.5px] uppercase title-underline pb-4">
+            Poverty: The Invisible Force
+          </h1>
+          <p className="font-body text-lg md:text-xl lg:text-2xl tracking-[2px]">
+            An AP Seminar Interdisciplinary Presentation
+          </p>
+        </div>
+        
         <div
-          className="bg-secondary/20 backdrop-blur-md text-card-foreground p-8 md:p-10 rounded-2xl max-w-3xl border border-primary/30 animate-item"
+          className="bg-[#F5F3E7E0] text-card-foreground p-8 md:p-10 rounded-[20px] border border-emerald-200 shadow-[0_8px_24px_rgba(0,0,0,0.12)] backdrop-blur-sm max-w-3xl animate-item w-full"
           style={{ animationName: 'fade-up', animationDelay: '1.0s' }}
         >
           <p className="text-base md:text-lg">
             “Poverty is a condition marked by the lack of basic needs and resources, shaping not only one’s social and economic status but also affecting mental, biological, and emotional development.”
           </p>
         </div>
-        <p className="font-accent italic text-xl md:text-2xl lg:text-3xl max-w-4xl animate-item" style={{ animationName: 'fade-up', animationDelay: '1.2s' }}>
-          “How do poverty-related challenges shape the cultural experiences of students in Baltimore and San Francisco educationally?”
-        </p>
+
+        <div className={cn("animate-item transition-all duration-1000 ease-out", inView ? 'opacity-100' : 'opacity-0')} style={{ animationDelay: '1.2s' }}>
+            <p className="font-accent italic text-xl md:text-2xl lg:text-3xl max-w-4xl p-4 pull-quote">
+              “How do poverty-related challenges shape the cultural experiences of students in Baltimore and San Francisco educationally?”
+            </p>
+        </div>
       </div>
     </section>
   );

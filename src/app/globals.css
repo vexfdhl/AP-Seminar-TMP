@@ -134,6 +134,23 @@ body {
   .is-visible .title-underline::after {
     width: 80%;
   }
+
+  .pull-quote {
+    position: relative;
+    padding-left: 1.5rem;
+  }
+
+  .pull-quote::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 1.5rem; /* 24px */
+    background-color: hsl(var(--primary));
+    box-shadow: 0 0 8px hsl(var(--primary) / 0.8);
+  }
   
   @keyframes fade-up {
     from { opacity: 0; transform: translateY(2rem); }

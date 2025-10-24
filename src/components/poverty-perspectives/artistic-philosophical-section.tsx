@@ -27,12 +27,13 @@ export function ArtisticPhilosophicalSection() {
         <div className="animate-item" style={{ animationName: 'fade-up', animationDelay: '0.2s' }}>
           <h2 className="font-headline text-3xl md:text-4xl title-underline pb-4">Vincent Arreguin <br /><span className="text-xl font-body">(Artistic &amp; Philosophical Lens)</span></h2>
         </div>
-        <p className="font-body text-base md:text-lg animate-item" style={{ animationName: 'fade-up', animationDelay: '0.4s' }}>
+        
+        <p className="font-body text-base md:text-lg max-w-[65ch] animate-item" style={{ animationName: 'fade-up', animationDelay: '0.4s' }}>
           “Art gives visibility to struggle, and philosophy interprets it. In education, creativity turns deprivation into empathy. Schools that cut art programs deprive students of moral imagination, limiting how they interpret justice and humanity (Hevia, 2025). Dickens’ *Oliver Twist* and Dorothea Lange’s *Migrant Mother* both show how storytelling transforms poverty into moral awareness.”
         </p>
 
         <div className={cn("my-4 animate-item transition-all duration-1000 ease-out", inView ? 'opacity-100 scale-102' : 'opacity-0 scale-100')} style={{ animationDelay: '0.6s' }}>
-            <p className="font-accent italic text-xl md:text-2xl p-4 border-l-4 border-primary">
+            <p className="font-accent italic text-xl md:text-2xl p-4 pull-quote">
                 “Art makes deprivations vivid enough to provoke reform.” — (Arreguin, 2025)
             </p>
         </div>

@@ -21,25 +21,29 @@ export function CulturalSocialSection() {
         />
       )}
       <div className="absolute inset-0 bg-[hsl(var(--background))] opacity-80" />
-      <div className="relative z-10 w-full max-w-7xl mx-auto p-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        <div className="md:col-start-2 flex flex-col justify-center items-end gap-6 animate-item" style={{ animationName: 'slide-in-left', animationDelay: '0.2s', animationDuration: '0.7s', animationTimingFunction: 'ease-out' }}>
-          <h2 className="font-headline text-3xl md:text-4xl text-right title-underline pb-4">Laila Gutierrez <br /><span className="text-xl font-body">(Cultural &amp; Social Lens)</span></h2>
-          <p className="font-body text-base md:text-lg text-right animate-item" style={{ animationName: 'fade-up', animationDelay: '0.4s' }}>
-            “Students in poverty-stricken communities often face systemic barriers in education — limited access to safe learning environments, mentorship, and cultural identity support. In both Baltimore and San Francisco, inequality shapes how students learn, socialize, and see their future (Bonta, 2021).”
-          </p>
-          <div className="relative bg-[#F5F3E7E0] text-card-foreground p-6 md:p-7 rounded-[20px] border border-emerald-200 shadow-[0_8px_24px_rgba(0,0,0,0.12)] backdrop-blur-sm max-w-3xl text-right animate-item orange-glow w-full" style={{ animationName: 'fade-up', animationDelay: '0.6s' }}>
-            <h3 className="font-headline text-lg mb-2 font-semibold text-emerald-900">Statistic</h3>
-            <p className="text-[1rem] md:text-[1.0625rem] leading-relaxed">
-              “5% of Baltimore teens lack a high school diploma and are not enrolled in school; over 10,000 juveniles were arrested in California (2021).”
+
+      <div className="relative z-10 w-full max-w-4xl mx-auto p-8 flex flex-col items-center text-center gap-6">
+        <div className="animate-item" style={{ animationName: 'fade-up', animationDelay: '0.2s' }}>
+          <h2 className="font-headline text-3xl md:text-4xl title-underline pb-4">Laila Gutierrez <br /><span className="text-xl font-body">(Cultural &amp; Social Lens)</span></h2>
+        </div>
+
+        <p className="font-body text-base md:text-lg max-w-[65ch] animate-item" style={{ animationName: 'fade-up', animationDelay: '0.4s' }}>
+          “Students in poverty-stricken communities often face systemic barriers in education — limited access to safe learning environments, mentorship, and cultural identity support. In both Baltimore and San Francisco, inequality shapes how students learn, socialize, and see their future (Bonta, 2021).”
+        </p>
+
+        <div className={cn("my-4 animate-item transition-all duration-1000 ease-out", inView ? 'opacity-100' : 'opacity-0')} style={{ animationDelay: '0.6s' }}>
+            <p className="font-accent italic text-xl md:text-2xl p-4 pull-quote">
+                “Inequality shapes how students learn, socialize, and see their future.”
             </p>
-          </div>
+        </div>
+
+        <div className="bg-[#F5F3E7E0] text-card-foreground p-6 md:p-7 rounded-[20px] border border-emerald-200 shadow-[0_8px_24px_rgba(0,0,0,0.12)] backdrop-blur-sm max-w-3xl animate-item w-full" style={{ animationName: 'fade-up', animationDelay: '0.8s' }}>
+          <h3 className="font-headline text-lg mb-2 font-semibold text-emerald-900">Statistic</h3>
+          <p className="text-[1rem] md:text-[1.0625rem] leading-relaxed">
+            “5% of Baltimore teens lack a high school diploma and are not enrolled in school; over 10,000 juveniles were arrested in California (2021).”
+          </p>
         </div>
       </div>
-      <style jsx>{`
-        .orange-glow {
-          box-shadow: 0 0 1.5rem 0.25rem rgba(251, 146, 60, 0.2), 0 8px 24px rgba(0,0,0,.12);
-        }
-      `}</style>
     </section>
   );
 }
