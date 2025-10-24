@@ -5,11 +5,11 @@ import { cn } from '@/lib/utils';
 import React from 'react';
 
 const solutions = [
-    "Community Mentorship & Housing Equity (Laila)",
-    "Art & Emotional Resilience (Vincent)",
-    "Tech-Equity & Future Readiness (Mireya)",
-    "Environmental Safety in Schools (Xenia)",
-    "Neuroscience-Informed Policy (Pravin)",
+    { title: "Community Mentorship & Housing Equity (Laila)", description: "Strengthening local ties and safe housing access." },
+    { title: "Art & Emotional Resilience (Vincent)", description: "Using creative programs to foster empathy and reform." },
+    { title: "Tech-Equity & Future Readiness (Mireya)", description: "Bridging digital divides for sustainable education." },
+    { title: "Environmental Safety in Schools (Xenia)", description: "Building safe, green learning environments." },
+    { title: "Neuroscience-Informed Policy (Pravin)", description: "Applying cognitive research to educational reform." },
 ];
 
 export function SolutionsSection() {
@@ -34,28 +34,33 @@ export function SolutionsSection() {
                 <div className="w-full max-w-4xl my-4">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
                       {solutions.slice(0, 3).map((solution, index) => (
-                          <div key={index} className="bg-[#F5F3E7E0] text-card-foreground p-4 rounded-[20px] border border-emerald-200 shadow-lg backdrop-blur-sm animate-item" style={{ animationName: 'fade-up', animationDelay: `${0.4 + index * 0.15}s` }}>
-                            <p className="text-sm font-semibold text-emerald-900">{solution}</p>
+                          <div key={index} className={cn("bg-[#F5F3E7E8] text-card-foreground p-4 rounded-2xl border border-emerald-200 shadow-lg backdrop-blur-sm animate-item transition-transform duration-300 hover:scale-105", inView ? 'is-visible' : 'opacity-0')} style={{ animationName: 'fade-up', animationDelay: `${0.4 + index * 0.15}s` }}>
+                            <p className="text-sm font-semibold text-emerald-900 mb-1">{solution.title}</p>
+                            <p className="text-xs text-teal-950">{solution.description}</p>
                           </div>
                       ))}
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 justify-center">
                       {solutions.slice(3).map((solution, index) => (
-                          <div key={index} className="bg-[#F5F3E7E0] text-card-foreground p-4 rounded-[20px] border border-emerald-200 shadow-lg backdrop-blur-sm animate-item sm:last:col-start-auto" style={{ animationName: 'fade-up', animationDelay: `${0.85 + index * 0.15}s` }}>
-                            <p className="text-sm font-semibold text-emerald-900">{solution}</p>
+                          <div key={index} className={cn("bg-[#F5F3E7E8] text-card-foreground p-4 rounded-2xl border border-emerald-200 shadow-lg backdrop-blur-sm animate-item transition-transform duration-300 hover:scale-105 sm:last:col-start-auto", inView ? 'is-visible' : 'opacity-0')} style={{ animationName: 'fade-up', animationDelay: `${0.85 + index * 0.15}s` }}>
+                            <p className="text-sm font-semibold text-emerald-900 mb-1">{solution.title}</p>
+                            <p className="text-xs text-teal-950">{solution.description}</p>
                           </div>
                       ))}
                     </div>
                 </div>
 
                 <div className="bg-[#F5F3E7E0] text-card-foreground p-6 md:p-7 rounded-[20px] border border-emerald-200 shadow-[0_8px_24px_rgba(0,0,0,0.12)] backdrop-blur-sm max-w-3xl animate-item w-full" style={{ animationName: 'fade-up', animationDelay: '1.2s' }}>
-                  <h3 className="font-headline text-lg mb-2 font-semibold text-emerald-900">Implementation Note</h3>
-                  <p className="text-[1rem] md:text-[1.0625rem] leading-relaxed">
-                    Integrated solutions require cross-sector collaboration between schools, city planning, and public health departments.
-                  </p>
+                    <h3 className="font-accent italic text-lg mb-2 text-emerald-900 relative inline-block">
+                        Implementation Note
+                        <span className="absolute bottom-[-0.25rem] left-0 w-2/3 h-[2px] bg-yellow-400"></span>
+                    </h3>
+                    <p className="text-[1rem] md:text-[1.0625rem] leading-relaxed text-left text-teal-950">
+                        Integrated solutions require cross-sector collaboration between schools, city planning, and public health departments.
+                    </p>
                 </div>
 
-                <p className={cn("font-accent italic text-xl md:text-2xl mt-8 animate-item")} style={{ animationName: 'fade-up', animationDelay: '1.5s', animationIterationCount: 1 }}>
+                <p className={cn("font-accent italic text-xl md:text-2xl mt-8 animate-item transition-opacity duration-1000", inView ? 'opacity-100' : 'opacity-0')} style={{ animationDelay: '1.5s' }}>
                     “Redefining Education Through Understanding Poverty.”
                 </p>
             </div>

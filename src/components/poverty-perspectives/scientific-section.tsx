@@ -36,8 +36,14 @@ const NeuralNetworkBackground = ({ inView }: { inView: boolean }) => (
 );
 
 const stats = [
-    "Over 2,500 DNA sites are altered by poverty exposure (McDade et al., 2021).",
-    "Low-income youth show smaller hippocampal volumes, impairing memory (Harvard, 2023)."
+    { 
+        title: "Epigenetic Alteration", 
+        description: "Over 2,500 DNA sites are altered by poverty exposure (McDade et al., 2021)." 
+    },
+    { 
+        title: "Neurological Impact", 
+        description: "Low-income youth show smaller hippocampal volumes, impairing memory (Harvard, 2023)." 
+    }
 ];
 
 export function ScientificSection() {
@@ -53,7 +59,7 @@ export function ScientificSection() {
                     <h2 className="font-headline text-3xl md:text-4xl title-underline pb-4">Pravin Yadav <br /><span className="text-xl font-body">(Scientific Lens)</span></h2>
                 </div>
                 <p className="font-body text-base md:text-lg max-w-[65ch] animate-item" style={{ animationName: 'fade-up', animationDelay: '0.4s' }}>
-                    “<Typewriter text="Poverty affects biology itself." speed={30} start={inView} delay={400} /> Research from Northwestern University shows over 2,500 DNA sites altered by chronic poverty stress (McDade et al., 2021). Harvard’s ABCD study found reduced hippocampal size and disrupted white matter in low-income youth, impairing memory and learning (Weissman et al., 2023). Brain plasticity can be rebuilt with stable environments and emotional support, proving education and neuroscience must unite.”
+                    <Typewriter text="Poverty affects biology itself." speed={30} start={inView} delay={400} /> Research from Northwestern University shows over 2,500 DNA sites altered by chronic poverty stress (McDade et al., 2021). Harvard’s ABCD study found reduced hippocampal size and disrupted white matter in low-income youth, impairing memory and learning (Weissman et al., 2023). Brain plasticity can be rebuilt with stable environments and emotional support, proving education and neuroscience must unite.
                 </p>
 
                 <div className={cn("my-4 animate-item transition-all duration-1000 ease-out", inView ? 'opacity-100' : 'opacity-0')} style={{ animationDelay: '0.6s' }}>
@@ -62,15 +68,16 @@ export function ScientificSection() {
                     </p>
                 </div>
                 
-                <div className="bg-[#F5F3E7E0] text-card-foreground p-6 md:p-7 rounded-[20px] border border-emerald-200 shadow-[0_8px_24px_rgba(0,0,0,0.12)] backdrop-blur-sm max-w-3xl animate-item w-full flex flex-col gap-4" style={{ animationName: 'fade-up', animationDelay: '0.8s' }}>
-                    <h3 className="font-headline text-lg mb-2 font-semibold text-emerald-900">Key Stats</h3>
-                    <ul className="space-y-3 text-left">
+                <div className="bg-[#F5F3E7E6] text-card-foreground p-6 md:p-8 rounded-2xl border border-emerald-200 shadow-[0_6px_18px_rgba(0,0,0,0.12)] backdrop-blur-sm max-w-3xl animate-item w-full" style={{ animationName: 'fade-up', animationDelay: '0.8s' }}>
+                    <div className="relative grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4">
+                        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[60%] w-[1px] bg-emerald-200 hidden md:block" />
                         {stats.map((stat, index) => (
-                           <li key={index} className="text-[1rem] md:text-[1.0625rem] leading-relaxed">
-                             {stat}
-                           </li> 
+                            <div key={index} className={cn("flex flex-col text-center md:text-left gap-1 animate-item", inView ? 'is-visible' : 'opacity-0')} style={{ animationName: 'fade-up', animationDelay: `${1 + index * 0.4}s` }}>
+                                <h3 className="font-headline text-md font-semibold text-emerald-900">{stat.title}</h3>
+                                <p className="text-sm text-teal-950">{stat.description}</p>
+                            </div>
                         ))}
-                    </ul>
+                    </div>
                 </div>
             </div>
         </section>
