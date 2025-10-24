@@ -3,36 +3,54 @@
 import { useInView } from '@/hooks/use-in-view';
 import { EducationChart } from './education-chart';
 import { cn } from '@/lib/utils';
+import { useState, useEffect } from 'react';
 
-const DataFlowBackground = () => (
-    <div className="absolute inset-0 overflow-hidden">
-        <style jsx>{`
-            @keyframes data-flow {
-                0% { transform: translateY(-100%); }
-                100% { transform: translateY(100%); }
-            }
-            .data-line {
-                position: absolute;
-                height: 150%;
-                width: 1px;
-                background: linear-gradient(to bottom, transparent, hsl(var(--accent)), transparent);
-                animation: data-flow 10s linear infinite;
-            }
-        `}</style>
-        {Array.from({ length: 50 }).map((_, i) => (
-            <div
-                key={i}
-                className="data-line"
-                style={{
-                    left: `${Math.random() * 100}%`,
-                    animationDelay: `${Math.random() * -10}s`,
-                    animationDuration: `${5 + Math.random() * 5}s`,
-                    opacity: Math.random() * 0.5 + 0.2
-                }}
-            />
-        ))}
-    </div>
-);
+type LineStyle = {
+  left: string;
+  animationDelay: string;
+  animationDuration: string;
+  opacity: number;
+};
+
+const DataFlowBackground = () => {
+    const [lineStyles, setLineStyles] = useState<LineStyle[]>([]);
+
+    useEffect(() => {
+        // Generate styles only on the client
+        const styles = Array.from({ length: 50 }).map(() => ({
+            left: `${Math.random() * 100}%`,
+            animationDelay: `${Math.random() * -10}s`,
+            animationDuration: `${5 + Math.random() * 5}s`,
+            opacity: Math.random() * 0.5 + 0.2,
+        }));
+        setLineStyles(styles);
+    }, []);
+
+    return (
+        <div className="absolute inset-0 overflow-hidden">
+            <style jsx>{`
+                @keyframes data-flow {
+                    0% { transform: translateY(-100%); }
+                    100% { transform: translateY(100%); }
+                }
+                .data-line {
+                    position: absolute;
+                    height: 150%;
+                    width: 1px;
+                    background: linear-gradient(to bottom, transparent, hsl(var(--accent)), transparent);
+                    animation: data-flow 10s linear infinite;
+                }
+            `}</style>
+            {lineStyles.map((style, i) => (
+                <div
+                    key={i}
+                    className="data-line"
+                    style={style}
+                />
+            ))}
+        </div>
+    );
+};
 
 
 export function FuturisticSection() {
