@@ -13,7 +13,7 @@ const solutions = [
     { id: 'sol-5', icon: BrainCircuit, text: "Neuroscience-Informed Policy (Pravin)", color: "text-purple-400" },
 ];
 
-const SolutionConnections = ({ inView }: { inView: boolean }) => {
+function SolutionConnections({ inView }: { inView: boolean }) {
     if (!inView) return null;
 
     const lineStyle: React.CSSProperties = {
@@ -31,7 +31,7 @@ const SolutionConnections = ({ inView }: { inView: boolean }) => {
             <line x1="80%" y1="65%" x2="50%" y2="50%" stroke="hsl(var(--primary))" strokeWidth="1" style={{...lineStyle, animationDelay: '1.4s'}} />
              <line x1="50%" y1="80%" x2="50%" y2="50%" stroke="hsl(var(--primary))" strokeWidth="1" style={{...lineStyle, animationDelay: '1.6s'}} />
         </svg>
-    )
+    );
 };
 
 export function SolutionsSection() {
