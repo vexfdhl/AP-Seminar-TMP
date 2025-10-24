@@ -30,6 +30,16 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  devIndicators: {
+    buildActivity: false,
+  },
+  // In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins"
+  experimental: {
+    allowedDevOrigins: [
+      "*.cluster-gizzoza7hzhfyxzo5d76y3flkw.cloudworkstations.dev",
+      "*.cloudworkstations.dev",
+    ],
+  }
 };
 
 export default nextConfig;
