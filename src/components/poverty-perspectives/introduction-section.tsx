@@ -10,7 +10,7 @@ export function IntroductionSection() {
   const bgImage = PlaceHolderImages.find(img => img.id === 'intro-bg');
 
   return (
-    <section ref={ref} className={cn('scroll-section text-center px-4', inView ? 'is-visible' : 'opacity-0')}>
+    <section ref={ref} className={cn('scroll-section text-center px-4 pt-16 sm:pt-20', inView ? 'is-visible' : 'opacity-0')}>
       {bgImage && (
         <Image
           src={bgImage.imageUrl}
@@ -24,12 +24,15 @@ export function IntroductionSection() {
       <div className="absolute inset-0 bg-[hsl(var(--background))] opacity-80" />
       <div className="relative z-10 flex flex-col items-center gap-8">
         <div className="animate-item" style={{ animationName: 'fade-up', animationDelay: '0.5s' }}>
-          <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl tracking-[1.5px] uppercase title-underline pb-4">
+          <h1 className="font-headline text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight uppercase">
             Poverty: The Invisible Force
           </h1>
-          <p className="font-body text-lg md:text-xl lg:text-2xl tracking-[2px]">
-            An AP Seminar Interdisciplinary Presentation
-          </p>
+          <div className="relative isolate z-10 mt-6 sm:mt-8 mb-4 sm:mb-5">
+            <p className="font-body text-base sm:text-lg tracking-wide opacity-90">
+              AP Seminar Team Multimedia Presentation
+            </p>
+            <div className="absolute left-1/2 -translate-x-1/2 bottom-[-0.5rem] h-[1.5px] w-[92%] md:w-[88%] lg:w-[72%] bg-primary/60" />
+          </div>
         </div>
         
         <div
