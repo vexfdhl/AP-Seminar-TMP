@@ -18,10 +18,10 @@ export function ReferencesSection() {
                 <h3 className="text-center font-body text-sm uppercase tracking-[2px] text-muted-foreground mb-4">References &amp; Documentation</h3>
                 <div className="flex justify-center">
                     <Link 
-                        href="https://docs.google.com/document/d/10MbmrIvPiWV9WgLRQvsGkXl-C8nPgKXl/edit?usp=sharing"
+                        href="https://drive.google.com/file/d/10MbmrIvPiWV9WgLRQvsGkXl-C8nPgKXl/view?usp=sharing"
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="inline-block bg-card text-card-foreground border border-emerald-300/20 shadow-md rounded-md px-6 py-3 font-body text-sm hover:bg-secondary/90 transition-all duration-300 ease-in-out hover:shadow-lg"
+                        className="inline-block bg-card text-card-foreground border border-emerald-300/20 shadow-md rounded-md px-6 py-3 font-body text-sm hover:bg-secondary/90 transition-all duration-300 ease-in-out hover:shadow-lg hover:-translate-y-0.5"
                     >
                         View Works Cited (PDF)
                     </Link>

@@ -44,7 +44,7 @@ export function IntroductionSection() {
         
         <div
           className="glassmorphism-card max-w-3xl animate-item w-full"
-          style={{ transitionDelay: '400ms', transform: 'scale(0.98)', opacity: '0' }}
+          style={{ transitionDelay: '400ms' }}
         >
           <p className="text-base md:text-lg">
             “Poverty is a condition marked by the lack of basic needs and resources, shaping not only one’s social and economic status but also affecting mental, biological, and emotional development.”
