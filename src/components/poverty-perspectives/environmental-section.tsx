@@ -33,7 +33,7 @@ export function EnvironmentalSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center w-full">
             <div className="flex flex-col gap-6 text-center md:text-left animate-item" style={{ transitionDelay: '400ms' }}>
               <p className="font-body text-base md:text-lg">
-                “The physical environment is a silent teacher. Poor housing, polluted streets, and unsafe neighborhoods impair student focus and attendance. Environmental neglect intensifies trauma — proving that education cannot thrive where safety is absent (CDC, 2022).”
+                The physical environment is a silent teacher. Poor housing, polluted streets, and unsafe neighborhoods impair student focus and attendance. Environmental neglect intensifies trauma proving that education cannot thrive where safety is absent (CDC, 2022).
               </p>
               <div className={cn("my-4 animate-item transition-all duration-1000 ease-out self-center md:self-start")} style={{ transitionDelay: '550ms' }}>
                   <p className="font-accent italic text-xl md:text-2xl p-4 pull-quote">

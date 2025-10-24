@@ -30,7 +30,7 @@ export function CulturalSocialSection() {
         </div>
 
         <p className="font-body text-base md:text-lg max-w-[65ch] animate-item" style={{ transitionDelay: '400ms' }}>
-          “Students in poverty-stricken communities often face systemic barriers in education — limited access to safe learning environments, mentorship, and cultural identity support. In both Baltimore and San Francisco, inequality shapes how students learn, socialize, and see their future (Bonta, 2021).”
+          Students in poverty-stricken communities often face systemic barriers in education limited access to safe learning environments, mentorship, and cultural identity support. In both Baltimore and San Francisco, inequality shapes how students learn, socialize, and see their future (Bonta, 2021).
         </p>
 
         <div className={cn("my-4 animate-item")} style={{ transitionDelay: '550ms' }}>

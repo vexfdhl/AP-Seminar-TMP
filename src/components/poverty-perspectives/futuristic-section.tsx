@@ -73,7 +73,7 @@ export function FuturisticSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center w-full">
           <div className="flex flex-col gap-6 text-center md:text-left animate-item" style={{ transitionDelay: '400ms' }}>
             <p className="font-body text-base md:text-lg">
-              “In a future of automation and climate instability, poverty risks deepening as technology divides classrooms. Education funding in Baltimore has declined, while AI and digital skills become basic requirements. Without intervention, access to future employment and upward mobility will remain stratified by income (U.S. Census Bureau, 2023).”
+              In a future of automation and climate instability, poverty risks deepening as technology divides classrooms. Education funding in Baltimore has declined, while AI and digital skills become basic requirements. Without intervention, access to future employment and upward mobility will remain stratified by income (U.S. Census Bureau, 2023).
             </p>
             <div className={cn("my-4 animate-item transition-all duration-1000 ease-out self-center md:self-start")} style={{ transitionDelay: '550ms' }}>
               <p className="font-accent italic text-xl md:text-2xl p-4 pull-quote">

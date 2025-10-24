@@ -31,7 +31,7 @@ export function ArtisticPhilosophicalSection() {
         </div>
         
         <p className="font-body text-base md:text-lg max-w-[65ch] animate-item" style={{ transitionDelay: '400ms' }}>
-          “Art gives visibility to struggle, and philosophy interprets it. In education, creativity turns deprivation into empathy. Schools that cut art programs deprive students of moral imagination, limiting how they interpret justice and humanity (Hevia, 2025). Dickens’ *Oliver Twist* and Dorothea Lange’s *Migrant Mother* both show how storytelling transforms poverty into moral awareness.”
+          Art gives visibility to struggle, and philosophy interprets it. In education, creativity turns deprivation into empathy. Schools that cut art programs deprive students of moral imagination, limiting how they interpret justice and humanity (Hevia, 2025). Dickens’ Oliver Twist and Dorothea Lange’s Migrant Mother both show how storytelling transforms poverty into moral awareness.
         </p>
 
         <div className={cn("my-4 animate-item transition-all duration-1000 ease-out")} style={{ transitionDelay: '550ms' }}>

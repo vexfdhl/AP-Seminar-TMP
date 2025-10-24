@@ -47,13 +47,13 @@ export function IntroductionSection() {
           style={{ transitionDelay: '400ms' }}
         >
           <p className="text-base md:text-lg">
-            “Poverty is a condition marked by the lack of basic needs and resources, shaping not only one’s social and economic status but also affecting mental, biological, and emotional development.”
+            Poverty is a condition marked by the lack of basic needs and resources, shaping not only one’s social and economic status but also affecting mental, biological, and emotional development.
           </p>
         </div>
 
         <div className={cn("animate-item")} style={{ transitionDelay: '520ms' }}>
             <p className="font-accent italic text-xl md:text-2xl lg:text-3xl max-w-4xl p-4 pull-quote">
-              “How do poverty-related challenges shape the cultural experiences of students in Baltimore and San Francisco educationally?”
+              How do poverty related challenges shape the cultural experiences of students in Baltimore and San Francisco educationally?
             </p>
         </div>
       </div>
