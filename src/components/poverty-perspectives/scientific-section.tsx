@@ -76,7 +76,7 @@ export function ScientificSection() {
                     </p>
                 </div>
                 
-                <div className="bg-[#F5F3E7E6] text-card-foreground p-6 md:p-8 rounded-2xl border border-emerald-300/20 shadow-md backdrop-blur-md max-w-3xl animate-item w-full" style={{ transitionDelay: '750ms' }}>
+                <div className="glassmorphism-card max-w-3xl animate-item w-full" style={{ transitionDelay: '750ms' }}>
                     <div className="relative grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4">
                         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[60%] w-[1px] bg-emerald-200 hidden md:block" />
                         {stats.map((stat, index) => (

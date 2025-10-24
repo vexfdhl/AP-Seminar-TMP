@@ -12,7 +12,7 @@ export function IntroductionSection() {
   const bgVideo = PlaceHolderImages.find(img => img.id === 'introduction-video-bg');
 
   return (
-    <section ref={ref} className={cn('scroll-section text-center px-4 pt-16 sm:pt-20', inView ? 'is-visible' : '')}>
+    <section ref={ref} className={cn('scroll-section text-center', inView ? 'is-visible' : '')}>
       {bgVideo && (
         <video
           autoPlay
@@ -24,10 +24,14 @@ export function IntroductionSection() {
           src={bgVideo.imageUrl}
         />
       )}
-      <div className="absolute inset-0 bg-[hsl(var(--background))] opacity-80" />
-      <div className="relative z-10 flex flex-col items-center gap-8">
+      <div className="absolute inset-0 bg-[hsl(var(--background))] opacity-70" />
+      <div className="relative z-10 flex flex-col items-center gap-8 w-full max-w-4xl mx-auto px-4">
         <div className="animate-item" style={{ transitionDelay: '200ms' }}>
-          <h1 className="font-headline text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight uppercase">
+          <h1 className="font-headline text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight uppercase" style={{
+            '--min-font-size': '2.5rem',
+            '--fluid-font-size': '8vw',
+            '--max-font-size': '5rem',
+          } as React.CSSProperties}>
             Poverty: The Invisible Force
           </h1>
           <div className="relative isolate z-10 mt-6 sm:mt-8 mb-4 sm:mb-5">
@@ -39,7 +43,7 @@ export function IntroductionSection() {
         </div>
         
         <div
-          className="bg-[#F5F3E7E0] text-card-foreground p-8 md:p-10 rounded-[20px] border border-emerald-200 shadow-[0_8px_24px_rgba(0,0,0,0.12)] backdrop-blur-sm max-w-3xl animate-item w-full"
+          className="glassmorphism-card max-w-3xl animate-item w-full"
           style={{ transitionDelay: '400ms', transform: 'scale(0.98)', opacity: '0' }}
         >
           <p className="text-base md:text-lg">

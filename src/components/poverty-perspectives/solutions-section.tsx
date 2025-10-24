@@ -49,7 +49,7 @@ export function SolutionsSection() {
                 <div className="w-full max-w-4xl my-4 relative">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
                       {solutions.slice(0, 3).map((solution, index) => (
-                          <div key={index} className={cn("bg-[#F5F3E7E8] text-card-foreground p-4 rounded-2xl border border-emerald-300/20 shadow-md backdrop-blur-md animate-item transition-transform duration-300 hover:scale-105")} style={{ transitionDelay: `${550 + index * 120}ms` }}>
+                          <div key={index} className={cn("glassmorphism-card p-4 text-left transition-transform duration-300 hover:scale-105 animate-item")} style={{ transitionDelay: `${550 + index * 120}ms` }}>
                             <p className="text-sm font-semibold text-emerald-900 mb-1">{solution.title}</p>
                             <p className="text-xs text-teal-950">{solution.description}</p>
                           </div>
@@ -57,7 +57,7 @@ export function SolutionsSection() {
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 justify-center">
                       {solutions.slice(3).map((solution, index) => (
-                          <div key={index} className={cn("bg-[#F5F3E7E8] text-card-foreground p-4 rounded-2xl border border-emerald-300/20 shadow-md backdrop-blur-md animate-item transition-transform duration-300 hover:scale-105 sm:last:col-start-auto")} style={{ transitionDelay: `${910 + index * 120}ms` }}>
+                          <div key={index} className={cn("glassmorphism-card p-4 text-left transition-transform duration-300 hover:scale-105 sm:last:col-start-auto animate-item")} style={{ transitionDelay: `${910 + index * 120}ms` }}>
                             <p className="text-sm font-semibold text-emerald-900 mb-1">{solution.title}</p>
                             <p className="text-xs text-teal-950">{solution.description}</p>
                           </div>
@@ -65,7 +65,7 @@ export function SolutionsSection() {
                     </div>
                 </div>
 
-                <div className="bg-[#F5F3E7E0] text-card-foreground p-6 md:p-7 rounded-[20px] border border-emerald-300/20 shadow-md backdrop-blur-md max-w-3xl animate-item w-full" style={{ transitionDelay: '1200ms' }}>
+                <div className="glassmorphism-card max-w-3xl animate-item w-full" style={{ transitionDelay: '1200ms' }}>
                     <h3 className="font-accent italic text-lg mb-2 text-emerald-900 relative inline-block">
                         Implementation Note
                         <span className="absolute bottom-[-0.25rem] left-0 w-2/3 h-[2px] bg-yellow-400"></span>

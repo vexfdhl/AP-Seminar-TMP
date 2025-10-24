@@ -65,12 +65,12 @@ export function FuturisticSection() {
   return (
     <section ref={ref} className={cn('scroll-section', inView ? 'is-visible' : '')}>
       <DataFlowBackground />
-      <div className="relative z-10 w-full max-w-4xl mx-auto p-8 flex flex-col items-center text-center gap-6">
+      <div className="relative z-10 w-full max-w-5xl mx-auto p-8 flex flex-col items-center text-center gap-6">
         <div className="animate-item" style={{ transitionDelay: '200ms' }}>
           <h2 className="font-headline text-3xl md:text-4xl title-underline pb-4">Mireya Gonzalez <br /><span className="text-xl font-body">(Futuristic Lens)</span></h2>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center w-full max-w-5xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center w-full">
           <div className="flex flex-col gap-6 text-center md:text-left animate-item" style={{ transitionDelay: '400ms' }}>
             <p className="font-body text-base md:text-lg">
               “In a future of automation and climate instability, poverty risks deepening as technology divides classrooms. Education funding in Baltimore has declined, while AI and digital skills become basic requirements. Without intervention, access to future employment and upward mobility will remain stratified by income (U.S. Census Bureau, 2023).”
@@ -87,7 +87,7 @@ export function FuturisticSection() {
           </div>
         </div>
 
-        <div className="bg-[#F5F3E7E0] text-card-foreground p-6 md:p-7 rounded-[20px] border border-emerald-300/20 shadow-md backdrop-blur-md max-w-3xl animate-item w-full" style={{ transitionDelay: '700ms' }}>
+        <div className="glassmorphism-card max-w-3xl animate-item w-full" style={{ transitionDelay: '700ms' }}>
           <h3 className="font-headline text-lg mb-2 font-semibold text-emerald-900">Statistic</h3>
           <p className="text-[1rem] md:text-[1.0625rem] leading-relaxed">
             “Baltimore’s poverty rate: 20.1% (2023). Education funding projected to decrease by 6% over 5 years.”
