@@ -21,12 +21,12 @@ export function CulturalSocialSection() {
           data-ai-hint={bgImage.imageHint}
         />
       )}
-      <div className="absolute inset-0 bg-[hsl(var(--background))] opacity-75" />
-      <div className="absolute inset-0 bg-amber-500/5" style={{ boxShadow: 'inset 0 0 5rem 3rem hsl(var(--background))' }}/>
+      <div className="absolute inset-0 bg-[hsl(var(--background))] opacity-55" />
+      <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-[hsl(var(--card))]/10" />
 
       <div className="relative z-10 w-full max-w-4xl mx-auto p-8 flex flex-col items-center text-center gap-6">
         <div className="animate-item" style={{ transitionDelay: '200ms' }}>
-          <h2 className="font-headline text-3xl md:text-4xl title-underline pb-4">Laila Gutierrez <br /><span className="text-xl font-body">(Cultural & Social Lens)</span></h2>
+          <h2 className="font-headline text-3xl md:text-4xl title-underline pb-4">Cultural &amp; Social Lens</h2>
         </div>
 
         <p className="font-body text-base md:text-lg max-w-[65ch] animate-item" style={{ transitionDelay: '400ms' }}>
@@ -35,14 +35,14 @@ export function CulturalSocialSection() {
 
         <div className={cn("my-4 animate-item")} style={{ transitionDelay: '550ms' }}>
             <p className="font-accent italic text-xl md:text-2xl p-4 pull-quote">
-                “Inequality shapes how students learn, socialize, and see their future.”
+                Inequality shapes how students learn, socialize, and see their future.
             </p>
         </div>
 
         <div className="glassmorphism-card max-w-3xl animate-item w-full" style={{ transitionDelay: '700ms' }}>
-          <h3 className="font-headline text-lg mb-2 font-semibold">Statistic</h3>
+          <h3 className="font-headline text-lg mb-2 font-semibold text-primary">Statistic</h3>
           <p className="text-[1rem] md:text-[1.0625rem] leading-relaxed">
-            “5% of Baltimore teens lack a high school diploma and are not enrolled in school; over 10,000 juveniles were arrested in California (2021).”
+            5% of Baltimore teens lack a high school diploma and are not enrolled in school; over 10,000 juveniles were arrested in California (2021).
           </p>
         </div>
       </div>

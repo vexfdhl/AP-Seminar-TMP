@@ -22,12 +22,12 @@ export function ArtisticPhilosophicalSection() {
           data-ai-hint={bgImage.imageHint}
         />
       )}
-      <div className="absolute inset-0 bg-[hsl(var(--background))] opacity-75" />
-      <div className="absolute inset-0 vignette-gold" />
+      <div className="absolute inset-0 bg-[hsl(var(--background))] opacity-55" />
+      <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-[hsl(var(--card))]/10" />
 
       <div className="relative z-10 w-full max-w-4xl mx-auto p-8 flex flex-col items-center text-center gap-6">
         <div className="animate-item" style={{ transitionDelay: '200ms' }}>
-          <h2 className="font-headline text-3xl md:text-4xl title-underline pb-4">Vincent Arreguin <br /><span className="text-xl font-body">(Artistic &amp; Philosophical Lens)</span></h2>
+          <h2 className="font-headline text-3xl md:text-4xl title-underline pb-4">Artistic &amp; Philosophical Lens</h2>
         </div>
         
         <p className="font-body text-base md:text-lg max-w-[65ch] animate-item" style={{ transitionDelay: '400ms' }}>
@@ -36,15 +36,15 @@ export function ArtisticPhilosophicalSection() {
 
         <div className={cn("my-4 animate-item transition-all duration-1000 ease-out")} style={{ transitionDelay: '550ms' }}>
             <p className="font-accent italic text-xl md:text-2xl p-4 pull-quote">
-                <Typewriter text="“Art makes deprivations vivid enough to provoke reform.”" start={inView} speed={25} delay={700} />
-                 — (Arreguin, 2025)
+                <Typewriter text="Art makes deprivations vivid enough to provoke reform." start={inView} speed={25} delay={700} />
+                 (Arreguin, 2025)
             </p>
         </div>
         
         <div className="glassmorphism-card max-w-3xl animate-item w-full" style={{ transitionDelay: '700ms' }}>
-          <h3 className="font-headline text-lg mb-2 font-semibold">Statistic</h3>
+          <h3 className="font-headline text-lg mb-2 font-semibold text-primary">Statistic</h3>
           <p className="text-[1rem] md:text-[1.0625rem] leading-relaxed">
-            “Baltimore loses 1.5 million instructional hours yearly due to failing infrastructure; artistic education helps re-engage affected youth (City Journal, 2025).”
+            Baltimore loses 1.5 million instructional hours yearly due to failing infrastructure; artistic education helps re-engage affected youth (City Journal, 2025).
           </p>
         </div>
       </div>

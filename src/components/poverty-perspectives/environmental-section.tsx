@@ -23,11 +23,12 @@ export function EnvironmentalSection() {
           data-ai-hint={bgImage.imageHint}
         />
       )}
-      <div className="absolute inset-0 bg-[hsl(var(--background))] opacity-75" />
+      <div className="absolute inset-0 bg-[hsl(var(--background))] opacity-55" />
+      <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-[hsl(var(--card))]/10" />
 
       <div className="relative z-10 w-full max-w-5xl mx-auto p-8 flex flex-col items-center text-center gap-6">
         <div className="animate-item" style={{ transitionDelay: '200ms' }}>
-          <h2 className="font-headline text-3xl md:text-4xl title-underline pb-4">Xenia Benitez <br /><span className="text-xl font-body">(Environmental Lens)</span></h2>
+          <h2 className="font-headline text-3xl md:text-4xl title-underline pb-4">Environmental Lens</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center w-full">
@@ -37,7 +38,7 @@ export function EnvironmentalSection() {
               </p>
               <div className={cn("my-4 animate-item transition-all duration-1000 ease-out self-center md:self-start")} style={{ transitionDelay: '550ms' }}>
                   <p className="font-accent italic text-xl md:text-2xl p-4 pull-quote">
-                      “Education cannot thrive where safety is absent.”
+                      Education cannot thrive where safety is absent.
                   </p>
               </div>
             </div>
@@ -47,9 +48,9 @@ export function EnvironmentalSection() {
         </div>
         
         <div className="glassmorphism-card max-w-3xl animate-item w-full" style={{ transitionDelay: '700ms' }}>
-          <h3 className="font-headline text-lg mb-2 font-semibold">Statistic</h3>
+          <h3 className="font-headline text-lg mb-2 font-semibold text-primary">Statistic</h3>
           <p className="text-[1rem] md:text-[1.0625rem] leading-relaxed">
-            “School conditions account for nearly 20% of learning loss in low-income districts (CDC, 2022).”
+            School conditions account for nearly 20% of learning loss in low-income districts (CDC, 2022).
           </p>
         </div>
       </div>

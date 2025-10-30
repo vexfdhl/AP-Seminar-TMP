@@ -9,6 +9,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const NeuralNetworkBackground = ({ inView }: { inView: boolean }) => {
     const bgVideo = PlaceHolderImages.find(img => img.id === 'scientific-video-bg');
+    const fallbackImage = PlaceHolderImages.find(img => img.id === 'scientific-member-bg');
 
     return (
     <div className="absolute inset-0 opacity-15 pointer-events-none">
@@ -19,7 +20,7 @@ const NeuralNetworkBackground = ({ inView }: { inView: boolean }) => {
                 muted
                 playsInline
                 className="absolute w-full h-full object-cover"
-                poster="https://picsum.photos/seed/dna/1920/1080"
+                poster={fallbackImage?.imageUrl}
                 src={bgVideo.imageUrl}
             />
         )}
@@ -60,11 +61,12 @@ export function ScientificSection() {
     return (
         <section ref={ref} className={cn('scroll-section bg-background', inView ? 'is-visible' : '')}>
             <NeuralNetworkBackground inView={inView} />
-            <div className="absolute inset-0 bg-[hsl(var(--background))] opacity-75" />
+            <div className="absolute inset-0 bg-[hsl(var(--background))] opacity-55" />
+            <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-[hsl(var(--card))]/10" />
 
             <div className="relative z-10 w-full max-w-4xl mx-auto p-8 flex flex-col items-center text-center gap-6">
                 <div className="animate-item" style={{ transitionDelay: '200ms' }}>
-                    <h2 className="font-headline text-3xl md:text-4xl title-underline pb-4">Pravin Yadav <br /><span className="text-xl font-body">(Scientific Lens)</span></h2>
+                    <h2 className="font-headline text-3xl md:text-4xl title-underline pb-4">Scientific Lens</h2>
                 </div>
                 <p className="font-body text-base md:text-lg max-w-[65ch] animate-item" style={{ transitionDelay: '400ms' }}>
                     <Typewriter text="Poverty affects biology itself." speed={30} start={inView} delay={400} /> Research from Northwestern University shows over 2,500 DNA sites altered by chronic poverty stress (McDade et al., 2021). Harvard’s ABCD study found reduced hippocampal size and disrupted white matter in low-income youth, impairing memory and learning (Weissman et al., 2023). Brain plasticity can be rebuilt with stable environments and emotional support, proving education and neuroscience must unite.
@@ -72,7 +74,7 @@ export function ScientificSection() {
 
                 <div className={cn("my-4 animate-item")} style={{ transitionDelay: '600ms' }}>
                     <p className="font-accent italic text-xl md:text-2xl p-4 pull-quote">
-                        “Poverty becomes written into our biology.”
+                        Poverty becomes written into our biology.
                     </p>
                 </div>
                 
@@ -81,7 +83,7 @@ export function ScientificSection() {
                         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[60%] w-[1px] bg-emerald-200/50 hidden md:block" />
                         {stats.map((stat, index) => (
                             <div key={index} className={cn("flex flex-col text-center md:text-left gap-1 animate-item")} style={{ transitionDelay: `${850 + index * 120}ms` }}>
-                                <h3 className="font-headline text-md font-semibold">{stat.title}</h3>
+                                <h3 className="font-headline text-md font-semibold text-primary">{stat.title}</h3>
                                 <p className="text-sm">{stat.description}</p>
                             </div>
                         ))}

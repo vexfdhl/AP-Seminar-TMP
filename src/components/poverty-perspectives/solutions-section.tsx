@@ -6,11 +6,11 @@ import { cn } from '@/lib/utils';
 import React from 'react';
 
 const solutions = [
-    { title: "Community Mentorship & Housing Equity (Laila)", description: "Connects students with community mentors to stabilize educational support." },
-    { title: "Art & Emotional Resilience (Vincent)", description: "Uses creative expression to heal and empower through empathy." },
-    { title: "Tech-Equity & Future Readiness (Mireya)", description: "Promotes digital access and career readiness programs for underfunded schools." },
-    { title: "Environmental Safety in Schools (Xenia)", description: "Advocates for cleaner, safer learning spaces to reduce stress and illness." },
-    { title: "Neuroscience-Informed Policy (Pravin)", description: "Aligns policy with brain science to mitigate cognitive effects of poverty." },
+    { title: "Community Mentorship & Housing Equity", description: "Connects students with community mentors to stabilize educational support." },
+    { title: "Art & Emotional Resilience", description: "Uses creative expression to heal and empower through empathy." },
+    { title: "Tech-Equity & Future Readiness", description: "Promotes digital access and career readiness programs for underfunded schools." },
+    { title: "Environmental Safety in Schools", description: "Advocates for cleaner, safer learning spaces to reduce stress and illness." },
+    { title: "Neuroscience-Informed Policy", description: "Aligns policy with brain science to mitigate cognitive effects of poverty." },
 ];
 
 const SolutionConnections = ({ inView }: { inView: boolean }) => (
@@ -50,7 +50,7 @@ export function SolutionsSection() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
                       {solutions.slice(0, 3).map((solution, index) => (
                           <div key={index} className={cn("glassmorphism-card p-4 text-left transition-transform duration-300 hover:scale-105 animate-item")} style={{ transitionDelay: `${550 + index * 120}ms` }}>
-                            <p className="text-sm font-semibold mb-1">{solution.title}</p>
+                            <p className="text-sm font-semibold mb-1 text-primary">{solution.title}</p>
                             <p className="text-xs">{solution.description}</p>
                           </div>
                       ))}
@@ -58,7 +58,7 @@ export function SolutionsSection() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 justify-center">
                       {solutions.slice(3).map((solution, index) => (
                           <div key={index} className={cn("glassmorphism-card p-4 text-left transition-transform duration-300 hover:scale-105 sm:last:col-start-auto animate-item")} style={{ transitionDelay: `${910 + index * 120}ms` }}>
-                            <p className="text-sm font-semibold mb-1">{solution.title}</p>
+                            <p className="text-sm font-semibold mb-1 text-primary">{solution.title}</p>
                             <p className="text-xs">{solution.description}</p>
                           </div>
                       ))}
@@ -66,7 +66,7 @@ export function SolutionsSection() {
                 </div>
 
                 <div className="glassmorphism-card max-w-3xl animate-item w-full" style={{ transitionDelay: '1200ms' }}>
-                    <h3 className="font-accent italic text-lg mb-2 relative inline-block">
+                    <h3 className="font-accent italic text-lg mb-2 relative inline-block text-primary">
                         Implementation Note
                         <span className="absolute bottom-[-0.25rem] left-0 w-2/3 h-[2px] bg-yellow-400"></span>
                     </h3>
@@ -76,7 +76,7 @@ export function SolutionsSection() {
                 </div>
 
                 <p className={cn("font-accent italic text-xl md:text-2xl mt-8 animate-item gold-shimmer-text")} style={{ transitionDelay: '1350ms' }}>
-                    “Redefining Education Through Understanding Poverty.”
+                    Redefining Education Through Understanding Poverty.
                 </p>
             </div>
         </section>

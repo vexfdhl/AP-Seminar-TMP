@@ -24,7 +24,9 @@ export function IntroductionSection() {
           src={bgVideo.imageUrl}
         />
       )}
-      <div className="absolute inset-0 bg-[hsl(var(--background))] opacity-65" />
+      <div className="absolute inset-0 bg-[hsl(var(--background))] opacity-50" />
+      <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-[hsl(var(--card))]/10" />
+
       <div className="relative z-10 flex flex-col items-center gap-8 w-full max-w-4xl mx-auto px-4">
         <div className="animate-item" style={{ transitionDelay: '200ms' }}>
           <h1 className="font-headline text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight uppercase" style={{

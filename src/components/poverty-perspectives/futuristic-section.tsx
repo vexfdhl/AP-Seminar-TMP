@@ -40,6 +40,7 @@ const FutureEducationChart = ({ startAnimation }: { startAnimation: boolean }) =
 
 const DataFlowBackground = () => {
     const bgVideo = PlaceHolderImages.find(img => img.id === 'futuristic-video-bg');
+    const fallbackImage = PlaceHolderImages.find(img => img.id === 'futuristic-member-bg');
 
     return (
     <div className="absolute inset-0 overflow-hidden">
@@ -50,7 +51,7 @@ const DataFlowBackground = () => {
                 muted
                 playsInline
                 className="absolute w-full h-full object-cover"
-                poster="https://picsum.photos/seed/techbg/1920/1080"
+                poster={fallbackImage?.imageUrl}
                 src={bgVideo.imageUrl}
             />
         )}
@@ -65,9 +66,10 @@ export function FuturisticSection() {
   return (
     <section ref={ref} className={cn('scroll-section', inView ? 'is-visible' : '')}>
       <DataFlowBackground />
+      <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-[hsl(var(--card))]/10" />
       <div className="relative z-10 w-full max-w-5xl mx-auto p-8 flex flex-col items-center text-center gap-6">
         <div className="animate-item" style={{ transitionDelay: '200ms' }}>
-          <h2 className="font-headline text-3xl md:text-4xl title-underline pb-4">Mireya Gonzalez <br /><span className="text-xl font-body">(Futuristic Lens)</span></h2>
+          <h2 className="font-headline text-3xl md:text-4xl title-underline pb-4">Futuristic Lens</h2>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center w-full">
@@ -77,7 +79,7 @@ export function FuturisticSection() {
             </p>
             <div className={cn("my-4 animate-item transition-all duration-1000 ease-out self-center md:self-start")} style={{ transitionDelay: '550ms' }}>
               <p className="font-accent italic text-xl md:text-2xl p-4 pull-quote">
-                “Technology divides classrooms.”
+                Technology divides classrooms.
               </p>
             </div>
           </div>
@@ -88,9 +90,9 @@ export function FuturisticSection() {
         </div>
 
         <div className="glassmorphism-card max-w-3xl animate-item w-full" style={{ transitionDelay: '700ms' }}>
-          <h3 className="font-headline text-lg mb-2 font-semibold">Statistic</h3>
+          <h3 className="font-headline text-lg mb-2 font-semibold text-primary">Statistic</h3>
           <p className="text-[1rem] md:text-[1.0625rem] leading-relaxed">
-            “Baltimore’s poverty rate: 20.1% (2023). Education funding projected to decrease by 6% over 5 years.”
+            Baltimore’s poverty rate: 20.1% (2023). Education funding projected to decrease by 6% over 5 years.
           </p>
         </div>
       </div>

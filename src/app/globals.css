@@ -219,17 +219,19 @@ body {
 }
 
 .glassmorphism-card {
-  background-color: rgba(254, 254, 254, 0.95);
-  border: 1px solid hsl(var(--border));
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid hsl(var(--border) / 0.28);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 1rem; /* 16px */
   color: hsl(var(--card-foreground));
   padding: 2rem;
-  transition: box-shadow 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .glassmorphism-card:hover {
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  border-color: hsl(var(--border) / 0.32);
+  transform: translateY(-2px);
 }
 
 .glassmorphism-card h3 {
