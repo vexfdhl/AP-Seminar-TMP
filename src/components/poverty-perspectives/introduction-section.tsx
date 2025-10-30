@@ -17,16 +17,15 @@ export function IntroductionSection() {
           src={bgImage.imageUrl}
           alt={bgImage.description}
           fill
-          className={cn("object-cover parallax-bg", inView ? 'scale-105' : 'scale-100')}
+          className={cn("object-cover parallax-bg -z-10", inView ? 'scale-100' : 'scale-105')}
           data-ai-hint={bgImage.imageHint}
           priority
         />
       )}
-      <div className="absolute inset-0 bg-[hsl(var(--background))] opacity-65" />
-      <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-[hsl(var(--card))]/10" />
+      <div className="absolute inset-0 bg-gradient-to-t from-background/70 to-background/50 z-0" />
 
       <div className="relative z-10 flex flex-col items-center gap-8 w-full max-w-4xl mx-auto px-4">
-        <div className="animate-item" style={{ transitionDelay: '200ms' }}>
+        <div className="animate-item" style={{ transitionDelay: '200ms', animationDuration: '550ms' }}>
           <h1 className="font-headline text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight uppercase" style={{
             '--min-font-size': '2.5rem',
             '--fluid-font-size': '8vw',
@@ -51,7 +50,7 @@ export function IntroductionSection() {
           </p>
         </div>
 
-        <div className={cn("animate-item")} style={{ transitionDelay: '520ms' }}>
+        <div className={cn("animate-item")} style={{ transitionDelay: '520ms', animationDelay: '620ms' }}>
             <p className="font-accent italic text-xl md:text-2xl lg:text-3xl max-w-4xl p-4 pull-quote">
               How do poverty related challenges shape the cultural experiences of students in Baltimore and San Francisco educationally?
             </p>
