@@ -38,7 +38,7 @@ export function SolutionsSection() {
                 </h2>
 
                 <p className="font-body text-base md:text-lg max-w-[65ch] animate-item" style={{ transitionDelay: '400ms' }}>
-                    Poverty is multidimensional: social, biological, environmental, and structural. To reform education, solutions must be integrated: mentorship programs, sustainable funding, access to arts and mental health care, and safer school environments. True innovation comes when we address the invisible forces shaping how students learn.
+                    Poverty is multidimensional social, biological, environmental, and structural. To reform education, solutions must be integrated: mentorship programs, sustainable funding, access to arts and mental health care, and safer school environments. True innovation comes when we address the invisible forces shaping how students learn.
                 </p>
                 
                 <div className="w-full max-w-4xl my-4 relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

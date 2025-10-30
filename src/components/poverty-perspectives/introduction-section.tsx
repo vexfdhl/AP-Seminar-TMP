@@ -9,22 +9,20 @@ import { cn } from '@/lib/utils';
 export function IntroductionSection() {
   const [ref, inView] = useInView({ threshold: 0.25, once: true });
   const bgImage = PlaceHolderImages.find(img => img.id === 'intro-bg');
-  const bgVideo = PlaceHolderImages.find(img => img.id === 'introduction-video-bg');
-
+  
   return (
     <section ref={ref} className={cn('scroll-section text-center', inView ? 'is-visible' : '')}>
-      {bgVideo && (
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className={cn("absolute inset-0 w-full h-full object-cover parallax-bg", inView ? 'scale-105' : 'scale-100')}
-          poster={bgImage?.imageUrl}
-          src={bgVideo.imageUrl}
+      {bgImage && (
+        <Image
+          src={bgImage.imageUrl}
+          alt={bgImage.description}
+          fill
+          className={cn("object-cover parallax-bg", inView ? 'scale-105' : 'scale-100')}
+          data-ai-hint={bgImage.imageHint}
+          priority
         />
       )}
-      <div className="absolute inset-0 bg-[hsl(var(--background))] opacity-50" />
+      <div className="absolute inset-0 bg-[hsl(var(--background))] opacity-65" />
       <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-[hsl(var(--card))]/10" />
 
       <div className="relative z-10 flex flex-col items-center gap-8 w-full max-w-4xl mx-auto px-4">
