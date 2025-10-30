@@ -8,15 +8,15 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
 
 const solutions = [
-    { title: "Community Mentorship & Housing Equity", description: "Connects students with community mentors to stabilize educational support.", accentColor: "hsla(217, 91%, 60%, 1)" },
-    { title: "Art & Emotional Resilience", description: "Uses creative expression to heal and empower through empathy.", accentColor: "hsla(262, 83%, 60%, 1)" },
-    { title: "Tech-Equity & Future Readiness", description: "Promotes digital access and career readiness programs for underfunded schools.", accentColor: "hsla(190, 83%, 60%, 1)" },
-    { title: "Environmental Safety in Schools", description: "Advocates for cleaner, safer learning spaces to reduce stress and illness.", accentColor: "hsla(140, 83%, 60%, 1)" },
-    { title: "Neuroscience-Informed Policy", description: "Aligns policy with brain science to mitigate cognitive effects of poverty.", accentColor: "hsla(340, 83%, 60%, 1)" },
+    { title: "Community Mentorship & Housing Equity", description: "Connects students with community mentors to stabilize educational support.", accentColor: "hsl(217, 91%, 60%)" },
+    { title: "Art & Emotional Resilience", description: "Uses creative expression to heal and empower through empathy.", accentColor: "hsl(262, 83%, 60%)" },
+    { title: "Tech-Equity & Future Readiness", description: "Promotes digital access and career readiness programs for underfunded schools.", accentColor: "hsl(190, 83%, 60%)" },
+    { title: "Environmental Safety in Schools", description: "Advocates for cleaner, safer learning spaces to reduce stress and illness.", accentColor: "hsl(140, 83%, 60%)" },
+    { title: "Neuroscience-Informed Policy", description: "Aligns policy with brain science to mitigate cognitive effects of poverty.", accentColor: "hsl(340, 83%, 60%)" },
 ];
 
 export function SolutionsSection() {
-    const [ref, inView] = useInView({ threshold: 0.25, once: false });
+    const [ref, inView] = useInView({ threshold: 0.25, once: true });
     const bgImage = PlaceHolderImages.find(img => img.id === 'solutions-bg');
     
     return (
@@ -30,7 +30,7 @@ export function SolutionsSection() {
                     data-ai-hint={bgImage.imageHint}
                 />
             )}
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[hsl(var(--background))/0.4] to-[hsl(var(--background))/0.8]" />
+            <div className="absolute inset-0 bg-background/65" />
 
             <div className="relative z-10 w-full max-w-5xl mx-auto p-8 flex flex-col items-center text-center gap-8">
                 <h2 className="font-headline text-4xl md:text-5xl title-underline pb-4 animate-item" style={{transitionDelay: '200ms'}}>
@@ -47,13 +47,13 @@ export function SolutionsSection() {
                         key={index} 
                         className={cn("glassmorphism-card p-5 text-left transition-all duration-300 hover:scale-105 animate-item flex flex-col")} 
                         style={{ 
-                          transitionDelay: `${550 + index * 120}ms`,
+                          transitionDelay: `${550 + index * 150}ms`,
                           '--accent-color': solution.accentColor 
                         } as React.CSSProperties}
                       >
                         <div className="solution-card-accent-bar" />
                         <h3 className="text-sm font-semibold mb-1 text-primary">{solution.title}</h3>
-                        <p className="text-xs text-card-foreground/70 flex-grow">{solution.description}</p>
+                        <p className="text-xs text-card-foreground/80 flex-grow">{solution.description}</p>
                       </div>
                   ))}
                 </div>
