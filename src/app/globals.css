@@ -219,8 +219,8 @@ body {
 }
 
 .glassmorphism-card {
-  background-color: hsl(var(--card) / 0.95);
-  border: 1px solid hsl(var(--border) / 0.28);
+  background-color: hsla(53, 33%, 93%, 0.95);
+  border: 1px solid hsla(177, 49%, 36%, 0.24);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
   border-radius: var(--radius);
   color: hsl(var(--card-foreground));
@@ -232,8 +232,8 @@ body {
 
 .glassmorphism-card:hover {
   box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-  border-color: hsl(var(--border) / 0.32);
-  transform: translateY(-4px);
+  border-color: hsla(177, 49%, 36%, 0.32);
+  transform: translateY(-4px) scale(1.02);
 }
 
 .glassmorphism-card h3 {
@@ -241,18 +241,11 @@ body {
 }
 
 .glassmorphism-card p {
-  color: hsl(var(--card-foreground));
+  color: hsl(var(--card-foreground) / 0.9);
 }
 
 .solution-card-accent-bar {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background-color: var(--accent-color);
-    box-shadow: 0 2px 8px 0 var(--accent-color);
+    display: none;
 }
 
 .glowing-border {

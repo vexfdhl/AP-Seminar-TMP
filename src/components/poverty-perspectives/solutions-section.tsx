@@ -8,11 +8,11 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
 
 const solutions = [
-    { title: "Community Mentorship & Housing Equity", description: "Connects students with community mentors to stabilize educational support.", accentColor: "hsl(217, 91%, 60%)" },
-    { title: "Art & Emotional Resilience", description: "Uses creative expression to heal and empower through empathy.", accentColor: "hsl(262, 83%, 60%)" },
-    { title: "Tech-Equity & Future Readiness", description: "Promotes digital access and career readiness programs for underfunded schools.", accentColor: "hsl(190, 83%, 60%)" },
-    { title: "Environmental Safety in Schools", description: "Advocates for cleaner, safer learning spaces to reduce stress and illness.", accentColor: "hsl(140, 83%, 60%)" },
-    { title: "Neuroscience-Informed Policy", description: "Aligns policy with brain science to mitigate cognitive effects of poverty.", accentColor: "hsl(340, 83%, 60%)" },
+    { title: "Community Mentorship & Housing Equity", description: "Connects students with community mentors to stabilize educational support." },
+    { title: "Art & Emotional Resilience", description: "Uses creative expression to heal and empower through empathy." },
+    { title: "Tech-Equity & Future Readiness", description: "Promotes digital access and career readiness programs for underfunded schools." },
+    { title: "Environmental Safety in Schools", description: "Advocates for cleaner, safer learning spaces to reduce stress and illness." },
+    { title: "Neuroscience-Informed Policy", description: "Aligns policy with brain science to mitigate cognitive effects of poverty." },
 ];
 
 export function SolutionsSection() {
@@ -45,24 +45,23 @@ export function SolutionsSection() {
                   {solutions.map((solution, index) => (
                       <div 
                         key={index} 
-                        className={cn("glassmorphism-card p-5 text-left transition-all duration-300 hover:scale-105 animate-item flex flex-col")} 
+                        className={cn("glassmorphism-card p-5 text-left transition-all duration-300 animate-item flex flex-col")} 
                         style={{ 
                           transitionDelay: `${550 + index * 150}ms`,
-                          '--accent-color': solution.accentColor 
                         } as React.CSSProperties}
                       >
                         <div className="solution-card-accent-bar" />
-                        <h3 className="text-sm font-semibold mb-1 text-primary">{solution.title}</h3>
-                        <p className="text-xs text-card-foreground/80 flex-grow">{solution.description}</p>
+                        <h3 className="text-sm font-semibold mb-1">{solution.title}</h3>
+                        <p className="text-xs flex-grow">{solution.description}</p>
                       </div>
                   ))}
                 </div>
 
                 <div className="glassmorphism-card max-w-3xl animate-item w-full glowing-border" style={{ transitionDelay: '1200ms' }}>
-                    <h3 className="font-accent italic text-lg mb-2 relative inline-block text-primary">
+                    <h3 className="font-accent italic text-lg mb-2 relative inline-block">
                         Implementation Note
                     </h3>
-                    <p className="text-[1rem] md:text-[1.0625rem] leading-relaxed text-left text-card-foreground">
+                    <p className="text-[1rem] md:text-[1.0625rem] leading-relaxed text-left">
                         Integrated solutions require cross-sector collaboration between schools, city planning, and public health departments.
                     </p>
                 </div>

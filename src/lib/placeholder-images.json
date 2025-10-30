@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "intro-bg",
-      "description": "An empty school hallway, conveying a sense of educational environment.",
-      "imageUrl": "https://images.unsplash.com/photo-1472146936668-d987bf0a6e38?q=80&w=1920&auto=format&fit=crop",
-      "imageHint": "school hallway"
+      "description": "A quiet urban street, conveying a sense of a low-income neighborhood context.",
+      "imageUrl": "https://images.unsplash.com/photo-1583273992815-a389df61575a?q=80&w=1920&auto=format&fit=crop",
+      "imageHint": "urban street"
     },
     {
       "id": "cultural-bg",
