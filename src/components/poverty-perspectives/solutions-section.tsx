@@ -4,78 +4,70 @@
 import { useInView } from '@/hooks/use-in-view';
 import { cn } from '@/lib/utils';
 import React from 'react';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
+import Image from 'next/image';
 
 const solutions = [
-    { title: "Community Mentorship & Housing Equity", description: "Connects students with community mentors to stabilize educational support." },
-    { title: "Art & Emotional Resilience", description: "Uses creative expression to heal and empower through empathy." },
-    { title: "Tech-Equity & Future Readiness", description: "Promotes digital access and career readiness programs for underfunded schools." },
-    { title: "Environmental Safety in Schools", description: "Advocates for cleaner, safer learning spaces to reduce stress and illness." },
-    { title: "Neuroscience-Informed Policy", description: "Aligns policy with brain science to mitigate cognitive effects of poverty." },
+    { title: "Community Mentorship & Housing Equity", description: "Connects students with community mentors to stabilize educational support.", accentColor: "hsla(217, 91%, 60%, 1)" },
+    { title: "Art & Emotional Resilience", description: "Uses creative expression to heal and empower through empathy.", accentColor: "hsla(262, 83%, 60%, 1)" },
+    { title: "Tech-Equity & Future Readiness", description: "Promotes digital access and career readiness programs for underfunded schools.", accentColor: "hsla(190, 83%, 60%, 1)" },
+    { title: "Environmental Safety in Schools", description: "Advocates for cleaner, safer learning spaces to reduce stress and illness.", accentColor: "hsla(140, 83%, 60%, 1)" },
+    { title: "Neuroscience-Informed Policy", description: "Aligns policy with brain science to mitigate cognitive effects of poverty.", accentColor: "hsla(340, 83%, 60%, 1)" },
 ];
 
-const SolutionConnections = ({ inView }: { inView: boolean }) => (
-  <svg className={cn("absolute inset-0 w-full h-full -z-10 transition-opacity duration-1000", inView ? 'opacity-25' : 'opacity-0')} style={{ animationDelay: '1s' }}>
-      <line x1="30%" y1="25%" x2="50%" y2="50%" stroke="hsl(var(--primary))" strokeWidth="1" className={cn(inView ? "animate-draw" : "")} strokeDasharray="1000" strokeDashoffset="1000" />
-      <line x1="70%" y1="25%" x2="50%" y2="50%" stroke="hsl(var(--primary))" strokeWidth="1" className={cn(inView ? "animate-draw" : "")} strokeDasharray="1000" strokeDashoffset="1000" />
-      <line x1="50%" y1="25%" x2="50%" y2="50%" stroke="hsl(var(--primary))" strokeWidth="1" className={cn(inView ? "animate-draw" : "")} strokeDasharray="1000" strokeDashoffset="1000" />
-      <line x1="38%" y1="75%" x2="50%" y2="50%" stroke="hsl(var(--primary))" strokeWidth="1" className={cn(inView ? "animate-draw" : "")} strokeDasharray="1000" strokeDashoffset="1000" />
-      <line x1="62%" y1="75%" x2="50%" y2="50%" stroke="hsl(var(--primary))" strokeWidth="1" className={cn(inView ? "animate-draw" : "")} strokeDasharray="1000" strokeDashoffset="1000" />
-      <style jsx>{`
-        .animate-draw {
-            animation: draw-line 1.5s ease-out forwards;
-            animation-delay: 1.2s;
-        }
-      `}</style>
-  </svg>
-);
-
-
 export function SolutionsSection() {
-    const [ref, inView] = useInView({ threshold: 0.25, once: true });
+    const [ref, inView] = useInView({ threshold: 0.25, once: false });
+    const bgImage = PlaceHolderImages.find(img => img.id === 'solutions-bg');
+    
     return (
-        <section ref={ref} className={cn('scroll-section bg-background', inView ? 'is-visible' : '')}>
-            <SolutionConnections inView={inView} />
-            <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary/10 rounded-full blur-3xl -z-10" />
+        <section ref={ref} className={cn('scroll-section min-h-screen bg-background', inView ? 'is-visible' : '')}>
+            {bgImage && (
+                <Image
+                    src={bgImage.imageUrl}
+                    alt={bgImage.description}
+                    fill
+                    className={cn("object-cover parallax-bg transition-transform duration-1000 ease-out", inView ? 'scale-105' : 'scale-100')}
+                    data-ai-hint={bgImage.imageHint}
+                />
+            )}
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[hsl(var(--background))/0.4] to-[hsl(var(--background))/0.8]" />
 
             <div className="relative z-10 w-full max-w-5xl mx-auto p-8 flex flex-col items-center text-center gap-8">
-                <h2 className="font-headline text-3xl md:text-4xl title-underline pb-4 animate-item" style={{transitionDelay: '200ms'}}>
-                    Solutions &amp; Synthesis
+                <h2 className="font-headline text-4xl md:text-5xl title-underline pb-4 animate-item" style={{transitionDelay: '200ms'}}>
+                    Solutions & Synthesis
                 </h2>
 
                 <p className="font-body text-base md:text-lg max-w-[65ch] animate-item" style={{ transitionDelay: '400ms' }}>
-                    Poverty is multidimensional social, biological, environmental, and structural. To reform education, solutions must be integrated: mentorship programs, sustainable funding, access to arts and mental health care, and safer school environments. True innovation comes when we address the invisible forces shaping how students learn.
+                    Poverty is multidimensional: social, biological, environmental, and structural. To reform education, solutions must be integrated: mentorship programs, sustainable funding, access to arts and mental health care, and safer school environments. True innovation comes when we address the invisible forces shaping how students learn.
                 </p>
                 
-                <div className="w-full max-w-4xl my-4 relative">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-                      {solutions.slice(0, 3).map((solution, index) => (
-                          <div key={index} className={cn("glassmorphism-card p-4 text-left transition-transform duration-300 hover:scale-105 animate-item")} style={{ transitionDelay: `${550 + index * 120}ms` }}>
-                            <p className="text-sm font-semibold mb-1 text-primary">{solution.title}</p>
-                            <p className="text-xs">{solution.description}</p>
-                          </div>
-                      ))}
-                    </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 justify-center">
-                      {solutions.slice(3).map((solution, index) => (
-                          <div key={index} className={cn("glassmorphism-card p-4 text-left transition-transform duration-300 hover:scale-105 sm:last:col-start-auto animate-item")} style={{ transitionDelay: `${910 + index * 120}ms` }}>
-                            <p className="text-sm font-semibold mb-1 text-primary">{solution.title}</p>
-                            <p className="text-xs">{solution.description}</p>
-                          </div>
-                      ))}
-                    </div>
+                <div className="w-full max-w-4xl my-4 relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {solutions.map((solution, index) => (
+                      <div 
+                        key={index} 
+                        className={cn("glassmorphism-card p-5 text-left transition-all duration-300 hover:scale-105 animate-item flex flex-col")} 
+                        style={{ 
+                          transitionDelay: `${550 + index * 120}ms`,
+                          '--accent-color': solution.accentColor 
+                        } as React.CSSProperties}
+                      >
+                        <div className="solution-card-accent-bar" />
+                        <h3 className="text-sm font-semibold mb-1 text-primary">{solution.title}</h3>
+                        <p className="text-xs text-card-foreground/70 flex-grow">{solution.description}</p>
+                      </div>
+                  ))}
                 </div>
 
-                <div className="glassmorphism-card max-w-3xl animate-item w-full" style={{ transitionDelay: '1200ms' }}>
+                <div className="glassmorphism-card max-w-3xl animate-item w-full glowing-border" style={{ transitionDelay: '1200ms' }}>
                     <h3 className="font-accent italic text-lg mb-2 relative inline-block text-primary">
                         Implementation Note
-                        <span className="absolute bottom-[-0.25rem] left-0 w-2/3 h-[2px] bg-yellow-400"></span>
                     </h3>
-                    <p className="text-[1rem] md:text-[1.0625rem] leading-relaxed text-left">
+                    <p className="text-[1rem] md:text-[1.0625rem] leading-relaxed text-left text-card-foreground">
                         Integrated solutions require cross-sector collaboration between schools, city planning, and public health departments.
                     </p>
                 </div>
 
-                <p className={cn("font-accent italic text-xl md:text-2xl mt-8 animate-item gold-shimmer-text")} style={{ transitionDelay: '1350ms' }}>
+                <p className={cn("font-accent italic text-xl md:text-2xl mt-8 animate-item slow-fade")} style={{ transitionDelay: '1350ms' }}>
                     Redefining Education Through Understanding Poverty.
                 </p>
             </div>
